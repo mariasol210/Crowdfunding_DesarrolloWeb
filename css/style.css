@@ -1,0 +1,92 @@
+:root{
+    /* Colores principales en el degradado del logo */
+    --amarillo: #FFE031;
+    --rosa: #FF66C4;
+    --morado: #A77BFF;
+
+    /* Iconos STEAM */
+    --verdeSteam: #9bffb2; 
+    --celesteSteam: #47e2ff; 
+    --amarilloSteam: #ffeb3f; 
+    --naranjaSteam: #fd9b1e; 
+    --rojoSteam: #e60101;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+}
+h1{
+    margin: 0;
+    font-size: 30px;
+}
+h2{
+    margin: 0;
+    padding-top: 0.5%;
+    font-size: 15px;
+}
+footer{
+    text-align: center;
+    background-color: var(--morado);
+    margin-top: 0.75%;
+}
+footer div{
+    padding-top: 1%;
+}
+
+#top_container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    background-color: var(--morado);
+}
+
+#top_container, footer{
+    padding: 1% 8%;
+}
+
+.logo {
+    height: auto;
+    width: 10vw;
+}
+
+#nav_container {
+    text-align: center;
+    background-color: var(--celesteSteam);
+    margin-block: 0.75%;
+    padding-block: 3%;
+}
+#nav_container, #content{
+    margin-inline: 8%;
+}
+
+#content { 
+    background-color: var(--verdeSteam);
+    height: 100vh;
+    padding: 3% 3%;
+}
+#nav_buttons{
+    display: flex;
+    margin-top: 3%;
+    justify-content: space-evenly;
+}
+#nav_buttons button{
+    height: 60px;
+    width: 60px;
+    border-radius: 50px;
+    border-style: none;
+    background-color: rgb(143, 255, 255);
+}
+#nav_buttons button:hover{
+    background-color: rgb(208, 244, 247);
+}
+.destacado{ 
+    display: flex;
+    background-color: rgb(197, 252, 218);
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.destacado img{
+    position: relative;
+}

@@ -1,32 +1,50 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <link href="css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="css/style.css" rel="stylesheet">
 </head>
 <body>
     <div id = "top_container">
-        <img class = "logo">
-        <div id = "search_bar">
-
-        </div>
-        <div class = "simple_btn_list">
-            <button>Iniciar Sesión</button>
-            <button>Registro</button>
+        <img class = "logo" src = "media/logo.png">
+        <div class = "top_buttons">
+            <form id="search_form"> 
+                <input type="search" id="search_bar" name="q" placeholder="Buscar...">
+                <button>B</button>
+                <button>Iniciar Sesión</button>
+                <button>Registro</button>
+            </form>   
         </div>
     </div>
     <div id = "nav_container">
         <h1>Project Steam</h1>
         <h2>Only the begining</h2>
         <nav>
-
+            <div id = "nav_buttons">
+                <button>S</button>
+                <button>T</button>
+                <button>E</button>
+                <button>A</button>
+                <button>M</button>
+            </div>
         </nav>
     </div>
     <div id = "content">
-
+        <div class = "destacado">
+            <img src="media/ProjectSteam.png">
+            <div>
+                <h3>Título destacado</h3>
+                <p>Texto</p>
+            </div>
+        </div>
+        <div class = "carrusel">
+            Espacio reservado para carrusel
+        </div>
     </div>
     <footer>
-
+        <div>Sobre nosotros</div>
+        <div>Términos y condiciones</div>
+        <div>Idioma</div>
     </footer>
 </body>
 </html>
