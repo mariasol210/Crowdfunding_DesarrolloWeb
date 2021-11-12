@@ -1,0 +1,46 @@
+html {
+    --my-yellow: #FFE031;
+    --my-pink: #FF66C4; 
+    --my-purple: #A77BFF;
+}
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.bgPurple{
+    background-color: var(--my-purple);
+    color: white;
+}
+
+.socialMediaButton {
+    text-align: left;
+    margin-bottom: 5%;
+}
+
+#socialMediaIcons{
+    width: 7%;
+}
+
+.link {
+    text-decoration: underline;
+    margin-bottom: 2%;
+}
+
+.link:hover{
+    color: var(--my-purple);
+    text-decoration: underline;
+}
+
+.signUpButton{
+    background-color: rgba(167,123, 255, 0.2) ;
+}
+
+.signUpButton:hover {
+    background-color: rgba(167,123, 255, 1) ;
+    color: white;
+}
+
+#imgModal {
+    object-fit: cover;
+    height: 100%
+}

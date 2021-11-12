@@ -1,20 +1,304 @@
 <!DOCTYPE html>
-<html>
-<head>
-    <link href="/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-
-</head>
-<body>
-    <script src="/js/bootstrap.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-    <button type="button" class="btn btn-primary">Primary</button>
+<html lang="es">
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,300;0,600;1,300&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/projectSteam.css" />
+  </head>
+  <body>
+    <!--button type="button" class="btn btn-primary">Primary</button>
     <button type="button" class="btn btn-secondary">Secondary</button>
     <button type="button" class="btn btn-success">Success</button>
     <button type="button" class="btn btn-danger">Danger</button>
     <button type="button" class="btn btn-warning">Warning</button>
     <button type="button" class="btn btn-info">Info</button>
     <button type="button" class="btn btn-light">Light</button>
-    <button type="button" class="btn btn-dark">Dark</button>
+    <button type="button" class="btn btn-dark">Dark</button>-->
 
-    <button type="button" class="btn btn-link">Link</button>
-</body>
+    <!-- Button trigger modal -->
+    <button
+      type="button"
+      class="btn bgPurple"
+      data-toggle="modal"
+      data-target="#signInModal"
+    >
+      Iniciar sesión
+    </button>
+
+    <!-- Modal to sign in-->
+    <div
+      class="modal fade"
+      id="signInModal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="SignInModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-header" id="signInHeader">
+            <h5 class="modal-title">Inicia sesión en tu cuenta</h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="container">
+              <div class="row">
+                <div class="col-sm" id="signInModalContent">
+                    <div class="row">
+                        <div class="col-sm-6 col-sm-12 ">
+                            <button type="button" class="btn btn-light socialMediaButton" style="text-align: left;">
+                                <span
+                                ><img src="img/igoogle.png"  id="socialMediaIcons"
+                                /></span>
+                                  Inicia sesión con Google
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <button type="button" class="btn btn-light socialMediaButton">
+                                <span
+                                ><img src="img/ifacebook.png" id="socialMediaIcons"
+                                /></span>
+                                  Inicia sesión con Facebook
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <button type="button" class="btn btn-light socialMediaButton">
+                                <span
+                                ><img src="img/iapple.png" id="socialMediaIcons"
+                                ></span>
+                                  Inicia sesión con Apple
+                            </button>
+                        </div>
+                    </div>
+                    
+                  <div class="row">
+                    <div class="col-sm"><hr /></div>
+                    <div class="col-sm-1"> o </div>
+                    <div class="col-sm"><hr /></div>
+                  </div>
+                    <div class="row">
+                        <div class="col">
+                      <form>
+                        <div class="form-group">
+                          <label for="exampleInputEmail1"
+                            >Correo electrónico</label
+                          >
+                          <input
+                            type="email"
+                            class="form-control"
+                            id="exampleInputEmail1"
+                            aria-describedby="emailHelp"
+                            placeholder="Enter email"
+                          />
+                          <small id="emailHelp" class="form-text text-muted"
+                            >Nunca compartiremos tu correo con nadie más.</small
+                          >
+                        </div>
+                        <div class="form-group">
+                          <label for="exampleInputPassword1">Contraseña</label>
+                          <input
+                            type="password"
+                            class="form-control"
+                            id="exampleInputPassword1"
+                            placeholder="Password"
+                          />
+                        </div>
+                        <button type="submit" class="btn bgPurple btn-lg btn-block" style="margin-bottom: 5%;">
+                          Iniciar sesión
+                        </button>
+                      </form>
+                    </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12 ">
+                            <p class="link"> <small class="text-left"> ¿Has olvidado tu contraseña?</small></p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <small class="text-left">
+                            <span>¿Es tu primera vez en Project STEAM? </span>
+                            <button type="button" class="btn btn-light btn-sm signUpButton"  >Regístrate</button>
+                        </small>
+                        </div>
+                        
+                    </div>
+                  
+                </div>
+
+                <div class="col-sm-6 d-none d-lg-block">
+                  <img
+                    src="img/signInModal.jpeg"
+                    class="img-fluid"
+                    id="imgModal"
+                    alt="Porject setam logo"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Button trigger modal Sign up -->
+    <button
+      type="button"
+      class="btn signUpButton"
+      data-toggle="modal"
+      data-target="#signUpModal"
+    >
+      Registrate
+    </button>
+
+    <!-- Modal to sign up-->
+    <div
+      class="modal fade"
+      id="signUpModal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="SignInModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-header" id="signInHeader">
+            <h5 class="modal-title">Crea una cuenta</h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="container">
+              <div class="row">
+                <div class="col-sm" id="signUpModalContent">
+                    <div class="row">
+                        <div class="col">
+                      <form>
+                        <div class="form-group">
+                            <label for="Name"
+                              >Nombre</label
+                            >
+                            <input
+                              type="text"
+                              class="form-control"
+                              id="user"
+                              aria-describedby="nameHelp"
+                              placeholder="John Doe"
+                            />
+                        </div>
+
+                        <div class="form-group">
+                          <label for="exampleInputEmail1"
+                            >Correo electrónico</label
+                          >
+                          <input
+                            type="email"
+                            class="form-control"
+                            id="exampleInputEmail1"
+                            aria-describedby="emailHelp"
+                            placeholder="name@workemail.com"
+                          />
+                          <small id="emailHelp" class="form-text text-muted"
+                            >Nunca compartiremos tu correo con nadie más.</small
+                          >
+                        </div>
+                        <div class="form-group">
+                          <label for="newPassword">Contraseña</label>
+                          <input
+                            type="password"
+                            class="form-control"
+                            id="newPassword"
+                            aria-describedby="passwordHelp"
+                            placeholder="Contraseña"
+                          />
+                          <small id="passwordHelp" class="form-text text-muted"
+                            >Usa 8 o más caracteres y combina letras, números y símbolos..</small
+                          >
+                        </div>
+                        <button type="submit" class="btn bgPurple btn-lg btn-block" style="margin-bottom: 5%;">
+                            Crear cuenta
+                        </button>
+                      </form>
+                    </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12 ">
+                            <p> <small class="text-left"> Al continuar, estás aceptando los <span class="link">Términos y condiciones de uso</span> (se abre en una ventana nueva). 
+                                Consulta nuestra <span class="link"> Política de privacidad</span> (se abre en una ventana nueva).</small></p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <small class="text-left">
+                            <span>¿Ya te has registrado?</span>
+                            <button type="button" class="btn btn-light btn-sm signUpButton" >Inicia Sesión</button>
+                        </small>
+                        </div>
+                        
+                    </div>
+                  
+                </div>
+
+                <div class="col-sm-6 d-none d-lg-block">
+                  <img
+                    src="img/signInModal.jpeg"
+                    class="img-fluid"
+                    id="imgModal"
+                    alt="Porject setam logo"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>
