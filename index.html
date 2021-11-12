@@ -17,6 +17,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="css/projectSteam.css" />
+    
   </head>
   <body>
     <div id = "top_container">
@@ -30,7 +31,7 @@
     <!-- Button trigger modal -->
     <button
       type="button"
-      class="btn bgPurple"
+      class="btn bgPurple signInButton"
       data-toggle="modal"
       data-target="#signInModal"
     >
@@ -62,6 +63,7 @@
           <div class="modal-body">
             <div class="container">
               <div class="row">
+                <!--Sign in content-->
                 <div class="col-sm" id="signInModalContent">
                     <div class="row">
                         <div class="col-sm-6 col-sm-12 ">
@@ -105,13 +107,13 @@
                         <div class="col">
                       <form>
                         <div class="form-group">
-                          <label for="exampleInputEmail1"
+                          <label for="Email1"
                             >Correo electrónico</label
                           >
                           <input
                             type="email"
                             class="form-control"
-                            id="exampleInputEmail1"
+                            id="Email1"
                             aria-describedby="emailHelp"
                             placeholder="Enter email"
                           />
@@ -120,11 +122,11 @@
                           >
                         </div>
                         <div class="form-group">
-                          <label for="exampleInputPassword1">Contraseña</label>
+                          <label for="Password1">Contraseña</label>
                           <input
                             type="password"
                             class="form-control"
-                            id="exampleInputPassword1"
+                            id="Password1"
                             placeholder="Password"
                           />
                         </div>
@@ -136,78 +138,27 @@
                     </div>
                     <div class="row">
                         <div class="col-sm-12 ">
-                            <p class="link"> <small class="text-left"> ¿Has olvidado tu contraseña?</small></p>
+                            <p class="link" id="forgotPassButton"> <small class="text-left"> ¿Has olvidado tu contraseña?</small></p>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-sm-12">
                             <small class="text-left">
                             <span>¿Es tu primera vez en Project STEAM? </span>
-                            <button type="button" class="btn btn-light btn-sm signUpButton"  >Regístrate</button>
+                            <button type="button" class="btn btn-light btn-sm signUpButton" >Regístrate</button>
                         </small>
                         </div>
                         
                     </div>
                   
                 </div>
-
-                <div class="col-sm-6 d-none d-lg-block">
-                  <img
-                    src="img/signInModal.jpeg"
-                    class="img-fluid"
-                    id="imgModal"
-                    alt="Porject setam logo"
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-
-    <!-- Button trigger modal Sign up -->
-    <button
-      type="button"
-      class="btn signUpButton"
-      data-toggle="modal"
-      data-target="#signUpModal"
-    >
-      Registrate
-    </button>
-
-    <!-- Modal to sign up-->
-    <div
-      class="modal fade"
-      id="signUpModal"
-      tabindex="-1"
-      role="dialog"
-      aria-labelledby="SignInModalLabel"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog modal-lg" role="document">
-        <div class="modal-content">
-          <div class="modal-header" id="signInHeader">
-            <h5 class="modal-title">Crea una cuenta</h5>
-            <button
-              type="button"
-              class="close"
-              data-dismiss="modal"
-              aria-label="Close"
-            >
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body">
-            <div class="container">
-              <div class="row">
+                <!--Sign up form-->
                 <div class="col-sm" id="signUpModalContent">
                     <div class="row">
                         <div class="col">
                       <form>
                         <div class="form-group">
-                            <label for="Name"
+                            <label for="user"
                               >Nombre</label
                             >
                             <input
@@ -220,13 +171,13 @@
                         </div>
 
                         <div class="form-group">
-                          <label for="exampleInputEmail1"
+                          <label for="Email2"
                             >Correo electrónico</label
                           >
                           <input
                             type="email"
                             class="form-control"
-                            id="exampleInputEmail1"
+                            id="Email2"
                             aria-describedby="emailHelp"
                             placeholder="name@workemail.com"
                           />
@@ -235,11 +186,11 @@
                           >
                         </div>
                         <div class="form-group">
-                          <label for="newPassword">Contraseña</label>
+                          <label for="newPassword2">Contraseña</label>
                           <input
                             type="password"
                             class="form-control"
-                            id="newPassword"
+                            id="newPassword2"
                             aria-describedby="passwordHelp"
                             placeholder="Contraseña"
                           />
@@ -263,12 +214,41 @@
                         <div class="col-sm-12">
                             <small class="text-left">
                             <span>¿Ya te has registrado?</span>
-                            <button type="button" class="btn btn-light btn-sm signUpButton" >Inicia Sesión</button>
+                            <button type="button" class="btn btn-light btn-sm signInButton">Inicia Sesión</button>
                         </small>
                         </div>
                         
                     </div>
                   
+                </div>
+                <!--Forgot password form-->
+                <div class="col-sm" id="forgotPassContent">
+                    <div class="row">
+                        <div class="col">
+                            <p> <small class="text-left"> No te preocupes. Te enviaremos un mensaje para ayudarte a restablecer tu contraseña.</small></p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <form>
+                                <div class="form-group">
+                                    <label for="Email3"
+                                      >Correo electrónico</label
+                                    >
+                                    <input
+                                        type="email"
+                                        class="form-control"
+                                        id="Email3"
+                                        aria-describedby="emailHelp"
+                                        placeholder="Enter email"
+                                    />
+                                </div>
+                                <button type="submit" class="btn bgPurple btn-lg btn-block" style="margin-bottom: 5%;">
+                                    Continuar
+                                  </button>
+                            </form>
+                        </div>
+                    </div>
                 </div>
 
                 <div class="col-sm-6 d-none d-lg-block">
@@ -276,7 +256,7 @@
                     src="img/signInModal.jpeg"
                     class="img-fluid"
                     id="imgModal"
-                    alt="Porject setam logo"
+                    alt="Project setam logo"
                   />
                 </div>
               </div>
@@ -333,6 +313,7 @@
       integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
       crossorigin="anonymous"
     ></script>
+    <script src="js/projectSteam.js"></script>
   </body>
 </html>
 
