@@ -9,78 +9,99 @@
     --celesteSteam: #47e2ff; 
     --amarilloSteam: #ffeb3f; 
     --naranjaSteam: #fd9b1e; 
-    --rojoSteam: #e60101;
+    --rojoSteam: #ff3838;
 }
 
 body{
     margin: 0;
     padding: 0;
 }
+
 h1{
     margin: 0;
-    font-size: 30px;
+    font-size: 35px;
 }
 h2{
     margin: 0;
-    padding-top: 0.5%;
+    padding-top: 0.75%;
     font-size: 15px;
 }
-footer{
-    text-align: center;
-    background-color: var(--morado);
-    margin-top: 0.75%;
-}
-footer div{
-    padding-top: 1%;
-}
 
-#top_container{
-    display: flex;
+/* TOP */
+.row.top_bar{
     justify-content: space-between;
-    align-items: center;
-    
-    background-color: var(--morado);
+    position: sticky;
+    border-bottom: 1px solid #e9ecef
 }
 
-#top_container, footer{
-    padding: 1% 8%;
+.col-md-5.top_buttons {
+    align-items: center;
+    text-align: end;
+    margin: auto 0;
+}
+
+.btn.search_button{
+    background-color: white;
 }
 
 .logo {
-    height: auto;
-    width: 10vw;
+    position: relative;
+    width: 12vw;
+    padding-block: 1%;
 }
 
-#nav_container {
+.row.top_bar h1{
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.row.top_bar h1, .row.top_bar h2{
+    color: var(--morado);
+}
+
+/* NAVEGACIÓN */
+.nav_container h1, .nav_container h2{
+    color: white;
+}
+
+.nav_container {
     text-align: center;
-    background-color: var(--celesteSteam);
-    margin-block: 0.75%;
+    background-image: url("../media/degradado.png");
+    background-size: auto 100%;
+    margin-top: 0.75%;     
+}
+
+.nav_container, .content{
+    width: 90%;
     padding-block: 3%;
 }
-#nav_container, #content{
-    margin-inline: 8%;
-}
 
-#content { 
-    background-color: var(--verdeSteam);
-    height: 100vh;
-    padding: 3% 3%;
-}
 #nav_buttons{
     display: flex;
     margin-top: 3%;
     justify-content: space-evenly;
 }
-#nav_buttons button{
-    height: 60px;
-    width: 60px;
-    border-radius: 50px;
-    border-style: none;
-    background-color: rgb(143, 255, 255);
+
+#nav_buttons input:hover{
+    opacity: 0.8;
 }
-#nav_buttons button:hover{
-    background-color: rgb(208, 244, 247);
+
+
+footer{
+    text-align: center;
+    background-color: var(--morado);
+    margin-top: 0.75%;
+    padding: 1% 8%;
 }
+footer div{
+    padding-top: 1%;
+}
+.content { 
+    background-color: var(--verdeSteam);
+    height: 100vh;
+    padding-inline: 3%;
+}
+
 .destacado{ 
     display: flex;
     background-color: rgb(197, 252, 218);
