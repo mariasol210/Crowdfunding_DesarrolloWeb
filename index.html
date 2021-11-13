@@ -1,43 +1,44 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <link
-      rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
-      crossorigin="anonymous"
-    />
-    <link href="css/style.css" rel="stylesheet">
+
+<head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
+  <link href="css/style.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,300;0,600;1,300&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="css/projectSteam.css" />
 </head>
+
 <body>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,300;0,600;1,300&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="css/projectSteam.css" />
-    
-  </head>
-  <body>
-    <div id = "top_container">
-        <img class = "logo" src = "media/logo.png">
-        <div class = "top_buttons">
-            <button>Iniciar Sesión</button>
-            <button>Registro</button>   
-        </div>
+  <!-- Top container -->
+  <div class="container-fluid">
+    <div class="row top_bar">
+      <div class="col-md-5" style="margin-block: auto;">
+        <h1>Project Steam</h1>
+        <h2>Only the begining</h2>
+      </div>
+      <div class="col-md-2" style="text-align: center;">
+        <img class="img-fluid logo" src="media/logo_azul.png">
+      </div>
+      <div class="col-md-5 top_buttons">
+        <button type="button" class="btn search_button">
+          <img src="media/search.png" style="width: 24px">
+        </button>
+        <!-- Button trigger modal -->
+        <button type="button" class="btn bgPurple signInButton" data-toggle="modal" data-target="#signInModal">
+          Iniciar sesión
+        </button>
+        <!-- Button trigger modal Sign up -->
+        <button type="button" class="btn signUpButton" style="display:none" data-toggle="modal"
+          data-target="#signUpModal">
+          Registrate
+        </button>
+      </div>
     </div>
-
-    <!-- Button trigger modal -->
-    <button
-      type="button"
-      class="btn bgPurple signInButton"
-      data-toggle="modal"
-      data-target="#signInModal"
-    >
-      Iniciar sesión
-    </button>
-
+  </div>
     <!-- Modal to sign in-->
     <div
       class="modal fade"
@@ -251,52 +252,123 @@
                     </div>
                 </div>
 
-                <div class="col-sm-6 d-none d-lg-block">
-                  <img
-                    src="img/signInModal.jpeg"
-                    class="img-fluid"
-                    id="imgModal"
-                    alt="Project setam logo"
-                  />
-                </div>
+              <div class="col-sm-6 d-none d-lg-block">
+                <img src="img/signInModal.jpeg" class="img-fluid" id="imgModal" alt="Porject setam logo" />
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
+  </div>
 
-    <div id = "nav_container">
-        <h1>Project Steam</h1>
-        <h2>Only the begining</h2>
-        <nav>
-            <div id = "nav_buttons">
-                <button>S</button>
-                <button>T</button>
-                <button>E</button>
-                <button>A</button>
-                <button>M</button>
-            </div>
-        </nav>
-    </div>
-    <div id = "content">
-        <div class = "destacado">
-            <img src="media/ProjectSteam.png">
-            <div>
-                <h3>Título destacado</h3>
-                <p>Texto</p>
-            </div>
-        </div>
-        <div class = "carrusel">
-            Espacio reservado para carrusel
-        </div>
+  <!-- Navigation bar-->
+  <div class="container-fluid nav_container">
+    <h1>Descubre proyectos</h1>
+    <h2>Explora nuestras categorías</h2>
+    <div id="nav_buttons">
+      <input type="image" name="ciencia" src="media/ciencia.png" width="80" height="auto" alt="ciencia">
+      <input type="image" name="tech" src="media/tech.png" width="80" height="auto" alt="tecnologia">
+      <input type="image" name="ingenieria" src="media/ingenieria.png" width="80" height="auto" alt="ingenieria">
+      <input type="image" name="arte" src="media/arte.png" width="80" height="auto" alt="arte">
+      <input type="image" name="mates" src="media/mates.png" width="80" height="auto" alt="matematicas">
     </div>
 
-    <footer>
-        <div>Sobre nosotros</div>
-        <div>Términos y condiciones</div>
-        <div>Idioma</div>
-    </footer>
+  </div>
+
+  <!-- Main content-->
+  <div class="container-fluid content">
+    <h1>Más populares</h1>
+    <div class="row destacado">
+      <div class="col-md-5">
+        <img class="img-fluid" src="media/ProjectSteam.png">
+      </div>
+      <div class="col-md-7">
+        <h3>Título destacado</h3>
+        <p>Texto</p>
+        <button type="button" class="btn bgPurple">
+          Ver más
+        </button>
+      </div>
+    </div>
+    <div class="row carrusel">
+      
+      Espacio reservado para carrusel
+    </div>
+
+    <h1>Nuevos favoritos</h1>
+    <div class="row destacado">
+      <div class="col-md-5">
+        <img class="img-fluid" src="media/ProjectSteam.png">
+      </div>
+      <div class="col-md-7">
+        <h3>Título destacado</h3>
+        <p>Texto</p>
+        <button type="button" class="btn bgPurple">
+          Ver más
+        </button>
+      </div>
+    </div>
+    <div class="row carrusel">
+      
+      Espacio reservado para carrusel
+    </div>
+
+    <h1>Recta final</h1>
+    <div class="row destacado">
+      <div class="col-md-5">
+        <img class="img-fluid" src="media/ProjectSteam.png">
+      </div>
+      <div class="col-md-7">
+        <h3>Título destacado</h3>
+        <p>Texto</p>
+        <button type="button" class="btn bgPurple">
+          Ver más
+        </button>
+      </div>
+    </div>
+    <div class="row carrusel">
+      
+      Espacio reservado para carrusel
+    </div>
+
+    <h1>Últimas oportunidades</h1>
+    <div class="row destacado">
+      <div class="col-md-5">
+        <img class="img-fluid" src="media/ProjectSteam.png">
+      </div>
+      <div class="col-md-7">
+        <h3>Título destacado</h3>
+        <p>Texto</p>
+        <button type="button" class="btn bgPurple">
+          Ver más
+        </button>
+      </div>
+    </div>
+    <div class="row carrusel">
+      
+      Espacio reservado para carrusel
+    </div>
+  </div>
+  
+  <!-- Footer-->
+  <footer class="row footer">
+    <div class="col-md-3">
+      <img class = "img-fluid logo" src="media/logo_azul.png">
+    </div>
+    <div class="col-md-3">
+      <a href="#">Sobre nosotros</a>
+        <a href="#">Contacto</a>
+    </div>
+    <div class="col-md-3">
+      <a href="#">Atención al cliente</a>
+      <a href="#">Términos y condiciones</a>
+    </div>
+    <div class="col-md-3">
+      <a href="#">Idioma</a>
+      <a href="#">Moneda</a>
+    </div>
+  </footer>
 
     <script
       src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
@@ -316,4 +388,3 @@
     <script src="js/projectSteam.js"></script>
   </body>
 </html>
-
