@@ -188,17 +188,38 @@ h2{
     float: right;
 
 }
+
 .carrusel{
     justify-content: center;
 }
+
 .carousel-inner{
     height: 60%;
 }
+
+.carousel-item .card{
+    border-radius: 15px;
+    border-width: 0px;
+    height: 100%;
+    background-color: #f8f9f9;
+}
+
+.carousel-item .card h4{
+    font-size: 20px;
+}
+
+.carousel-item .card p{
+    font-size: 15px;
+}
+
 .carrusel img{
     object-fit: cover; 
     width: 100%;
     height: 20vh;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
 }
+
 
 /* FOOTER */
 footer{
