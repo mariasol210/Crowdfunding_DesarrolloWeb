@@ -7,9 +7,10 @@
   <link href="css/style.css" rel="stylesheet">
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,300;0,600;1,300&family=Shrikhand&display=swap"
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,300;0,600;1,300&family=Shrikhand&display=swap"
     rel="stylesheet" />
-    <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -39,218 +40,168 @@
       </div>
     </div>
   </div>
-    <!-- Modal to sign in-->
-    <div
-      class="modal fade"
-      id="signInModal"
-      tabindex="-1"
-      role="dialog"
-      aria-labelledby="SignInModalLabel"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog modal-lg" role="document">
-        <div class="modal-content">
-          <div class="modal-header" id="signInHeader">
-            <h5 class="modal-title">Inicia sesión en tu cuenta</h5>
-            <button
-              type="button"
-              class="close"
-              data-dismiss="modal"
-              aria-label="Close"
-            >
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body">
-            <div class="container">
-              <div class="row">
-                <!--Sign in content-->
-                <div class="col-sm" id="signInModalContent">
-                    <div class="row">
-                        <div class="col-sm-6 col-sm-12 ">
-                            <button type="button" class="btn btn-light socialMediaButton" style="text-align: left;">
-                                <span
-                                ><img src="media/igoogle.png"  id="socialMediaIcons"
-                                /></span>
-                                  Inicia sesión con Google
-                            </button>
-                        </div>
-                    </div>
-                    
-                    <div class="row">
-                        <div class="col-sm-12">
-                            <button type="button" class="btn btn-light socialMediaButton">
-                                <span
-                                ><img src="media/ifacebook.png" id="socialMediaIcons"
-                                /></span>
-                                  Inicia sesión con Facebook
-                            </button>
-                        </div>
-                    </div>
-                    
-                    <div class="row">
-                        <div class="col-sm-12">
-                            <button type="button" class="btn btn-light socialMediaButton">
-                                <span
-                                ><img src="media/iapple.png" id="socialMediaIcons"
-                                ></span>
-                                  Inicia sesión con Apple
-                            </button>
-                        </div>
-                    </div>
-                    
-                  <div class="row">
-                    <div class="col-sm"><hr /></div>
-                    <div class="col-sm-1"> o </div>
-                    <div class="col-sm"><hr /></div>
+  <!-- Modal to sign in-->
+  <div class="modal fade" id="signInModal" tabindex="-1" role="dialog" aria-labelledby="SignInModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header" id="signInHeader">
+          <h5 class="modal-title">Inicia sesión en tu cuenta</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="container">
+            <div class="row">
+              <!--Sign in content-->
+              <div class="col-sm" id="signInModalContent">
+                <div class="row">
+                  <div class="col-sm-6 col-sm-12 ">
+                    <button type="button" class="btn btn-light socialMediaButton" style="text-align: left;">
+                      <span><img src="media/igoogle.png" id="socialMediaIcons" /></span>
+                      Inicia sesión con Google
+                    </button>
                   </div>
-                    <div class="row">
-                        <div class="col">
-                      <form>
-                        <div class="form-group">
-                          <label for="Email1"
-                            >Correo electrónico</label
-                          >
-                          <input
-                            type="email"
-                            class="form-control"
-                            id="Email1"
-                            aria-describedby="emailHelp"
-                            placeholder="Enter email"
-                          />
-                          <small id="emailHelp" class="form-text text-muted"
-                            >Nunca compartiremos tu correo con nadie más.</small
-                          >
-                        </div>
-                        <div class="form-group">
-                          <label for="Password1">Contraseña</label>
-                          <input
-                            type="password"
-                            class="form-control"
-                            id="Password1"
-                            placeholder="Password"
-                          />
-                        </div>
-                        <button type="submit" class="btn bgPurple btn-lg btn-block" style="margin-bottom: 5%;">
-                          Iniciar sesión
-                        </button>
-                      </form>
-                    </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-sm-12 ">
-                            <p class="link" id="forgotPassButton"> <small class="text-left"> ¿Has olvidado tu contraseña?</small></p>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-sm-12">
-                            <small class="text-left">
-                            <span>¿Es tu primera vez en Project STEAM? </span>
-                            <button type="button" class="btn btn-light btn-sm signUpButton" >Regístrate</button>
-                        </small>
-                        </div>
-                        
-                    </div>
-                  
                 </div>
-                <!--Sign up form-->
-                <div class="col-sm" id="signUpModalContent">
-                    <div class="row">
-                        <div class="col">
-                      <form>
-                        <div class="form-group">
-                            <label for="user"
-                              >Nombre</label
-                            >
-                            <input
-                              type="text"
-                              class="form-control"
-                              id="user"
-                              aria-describedby="nameHelp"
-                              placeholder="John Doe"
-                            />
-                        </div>
 
-                        <div class="form-group">
-                          <label for="Email2"
-                            >Correo electrónico</label
-                          >
-                          <input
-                            type="email"
-                            class="form-control"
-                            id="Email2"
-                            aria-describedby="emailHelp"
-                            placeholder="name@workemail.com"
-                          />
-                          <small id="emailHelp" class="form-text text-muted"
-                            >Nunca compartiremos tu correo con nadie más.</small
-                          >
-                        </div>
-                        <div class="form-group">
-                          <label for="newPassword2">Contraseña</label>
-                          <input
-                            type="password"
-                            class="form-control"
-                            id="newPassword2"
-                            aria-describedby="passwordHelp"
-                            placeholder="Contraseña"
-                          />
-                          <small id="passwordHelp" class="form-text text-muted"
-                            >Usa 8 o más caracteres y combina letras, números y símbolos..</small
-                          >
-                        </div>
-                        <button type="submit" class="btn bgPurple btn-lg btn-block" style="margin-bottom: 5%;">
-                            Crear cuenta
-                        </button>
-                      </form>
-                    </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-sm-12 ">
-                            <p> <small class="text-left"> Al continuar, estás aceptando los <span class="link">Términos y condiciones de uso</span> (se abre en una ventana nueva). 
-                                Consulta nuestra <span class="link"> Política de privacidad</span> (se abre en una ventana nueva).</small></p>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-sm-12">
-                            <small class="text-left">
-                            <span>¿Ya te has registrado?</span>
-                            <button type="button" class="btn btn-light btn-sm signInButton">Inicia Sesión</button>
-                        </small>
-                        </div>
-                        
-                    </div>
-                  
+                <div class="row">
+                  <div class="col-sm-12">
+                    <button type="button" class="btn btn-light socialMediaButton">
+                      <span><img src="media/ifacebook.png" id="socialMediaIcons" /></span>
+                      Inicia sesión con Facebook
+                    </button>
+                  </div>
                 </div>
-                <!--Forgot password form-->
-                <div class="col-sm" id="forgotPassContent">
-                    <div class="row">
-                        <div class="col">
-                            <p> <small class="text-left"> No te preocupes. Te enviaremos un mensaje para ayudarte a restablecer tu contraseña.</small></p>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col">
-                            <form>
-                                <div class="form-group">
-                                    <label for="Email3"
-                                      >Correo electrónico</label
-                                    >
-                                    <input
-                                        type="email"
-                                        class="form-control"
-                                        id="Email3"
-                                        aria-describedby="emailHelp"
-                                        placeholder="Enter email"
-                                    />
-                                </div>
-                                <button type="submit" class="btn bgPurple btn-lg btn-block" style="margin-bottom: 5%;">
-                                    Continuar
-                                  </button>
-                            </form>
-                        </div>
-                    </div>
+
+                <div class="row">
+                  <div class="col-sm-12">
+                    <button type="button" class="btn btn-light socialMediaButton">
+                      <span><img src="media/iapple.png" id="socialMediaIcons"></span>
+                      Inicia sesión con Apple
+                    </button>
+                  </div>
                 </div>
+
+                <div class="row">
+                  <div class="col-sm">
+                    <hr />
+                  </div>
+                  <div class="col-sm-1"> o </div>
+                  <div class="col-sm">
+                    <hr />
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col">
+                    <form>
+                      <div class="form-group">
+                        <label for="Email1">Correo electrónico</label>
+                        <input type="email" class="form-control" id="Email1" aria-describedby="emailHelp"
+                          placeholder="Enter email" />
+                        <small id="emailHelp" class="form-text text-muted">Nunca compartiremos tu correo con nadie
+                          más.</small>
+                      </div>
+                      <div class="form-group">
+                        <label for="Password1">Contraseña</label>
+                        <input type="password" class="form-control" id="Password1" placeholder="Password" />
+                      </div>
+                      <button type="submit" class="btn bgPurple btn-lg btn-block" style="margin-bottom: 5%;">
+                        Iniciar sesión
+                      </button>
+                    </form>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-sm-12 ">
+                    <p class="link" id="forgotPassButton"> <small class="text-left"> ¿Has olvidado tu
+                        contraseña?</small></p>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-sm-12">
+                    <small class="text-left">
+                      <span>¿Es tu primera vez en Project STEAM? </span>
+                      <button type="button" class="btn btn-light btn-sm signUpButton">Regístrate</button>
+                    </small>
+                  </div>
+
+                </div>
+
+              </div>
+              <!--Sign up form-->
+              <div class="col-sm" id="signUpModalContent">
+                <div class="row">
+                  <div class="col">
+                    <form>
+                      <div class="form-group">
+                        <label for="user">Nombre</label>
+                        <input type="text" class="form-control" id="user" aria-describedby="nameHelp"
+                          placeholder="John Doe" />
+                      </div>
+
+                      <div class="form-group">
+                        <label for="Email2">Correo electrónico</label>
+                        <input type="email" class="form-control" id="Email2" aria-describedby="emailHelp"
+                          placeholder="name@workemail.com" />
+                        <small id="emailHelp" class="form-text text-muted">Nunca compartiremos tu correo con nadie
+                          más.</small>
+                      </div>
+                      <div class="form-group">
+                        <label for="newPassword2">Contraseña</label>
+                        <input type="password" class="form-control" id="newPassword2" aria-describedby="passwordHelp"
+                          placeholder="Contraseña" />
+                        <small id="passwordHelp" class="form-text text-muted">Usa 8 o más caracteres y combina letras,
+                          números y símbolos..</small>
+                      </div>
+                      <button type="submit" class="btn bgPurple btn-lg btn-block" style="margin-bottom: 5%;">
+                        Crear cuenta
+                      </button>
+                    </form>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-sm-12 ">
+                    <p> <small class="text-left"> Al continuar, estás aceptando los <span class="link">Términos y
+                          condiciones de uso</span> (se abre en una ventana nueva).
+                        Consulta nuestra <span class="link"> Política de privacidad</span> (se abre en una ventana
+                        nueva).</small></p>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-sm-12">
+                    <small class="text-left">
+                      <span>¿Ya te has registrado?</span>
+                      <button type="button" class="btn btn-light btn-sm signInButton">Inicia Sesión</button>
+                    </small>
+                  </div>
+
+                </div>
+
+              </div>
+              <!--Forgot password form-->
+              <div class="col-sm" id="forgotPassContent">
+                <div class="row">
+                  <div class="col">
+                    <p> <small class="text-left"> No te preocupes. Te enviaremos un mensaje para ayudarte a restablecer
+                        tu contraseña.</small></p>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col">
+                    <form>
+                      <div class="form-group">
+                        <label for="Email3">Correo electrónico</label>
+                        <input type="email" class="form-control" id="Email3" aria-describedby="emailHelp"
+                          placeholder="Enter email" />
+                      </div>
+                      <button type="submit" class="btn bgPurple btn-lg btn-block" style="margin-bottom: 5%;">
+                        Continuar
+                      </button>
+                    </form>
+                  </div>
+                </div>
+              </div>
 
               <div class="col-sm-6 d-none d-lg-block">
                 <img src="media/signInModal.jpeg" class="img-fluid" id="imgModal" alt="Porject setam logo" />
@@ -296,86 +247,110 @@
       <section class="pt-5 pb-5">
         <div class="container">
           <div class="row">
-              <div class="col-12">
-                  <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-                      <div class="carousel-inner">
-                          <div class="carousel-item active">
-                              <div class="row">
-                                  <div class="col-md-4 mb-3">
-                                      <div class="card">
-                                          <img class="img-fluid" alt="100%x280" src="media/ProjectSteam.png">
-                                          <div class="card-body">
-                                              <h4 class="card-title">Special title treatment</h4>
-                                              <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                                          </div>
-                                      </div>
-                                  </div>
-                                  <div class="col-md-4 mb-3">
-                                      <div class="card">
-                                          <img class="img-fluid" alt="100%x280" src="media/ProjectSteam.png">
-                                          <div class="card-body">
-                                              <h4 class="card-title">Special title treatment</h4>
-                                              <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                                          </div>
-                                      </div>
-                                  </div>
-                                  <div class="col-md-4 mb-3">
-                                      <div class="card">
-                                          <img class="img-fluid" alt="100%x280" src="media/ProjectSteam.png">
-                                          <div class="card-body">
-                                              <h4 class="card-title">Special title treatment</h4>
-                                              <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                                          </div>
-                                      </div>
-                                  </div>
-                              </div>
+            <div class="col-12">
+              <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <div class="row">
+                      <div class="col-md-3 mb-3">
+                        <div class="card">
+                          <img class="img-fluid" alt="100%x280" src="media/ProjectSteam.png">
+                          <div class="card-body">
+                            <h4 class="card-title">Special title treatment</h4>
+                            <p class="card-text">With supporting text below as a natural lead-in to additional content.
+                            </p>
                           </div>
-                          <div class="carousel-item">
-                              <div class="row">
-                                  <div class="col-md-4 mb-3">
-                                      <div class="card">
-                                          <img class="img-fluid" alt="100%x280" src="media/ProjectSteam.png">
-                                          <div class="card-body">
-                                              <h4 class="card-title">Special title treatment</h4>
-                                              <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                                          </div>
-      
-                                      </div>
-                                  </div>
-                                  <div class="col-md-4 mb-3">
-                                      <div class="card">
-                                          <img class="img-fluid" alt="100%x280" src="media/ProjectSteam.png">
-                                          <div class="card-body">
-                                              <h4 class="card-title">Special title treatment</h4>
-                                              <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-      
-                                          </div>
-                                      </div>
-                                  </div>
-                                  <div class="col-md-4 mb-3">
-                                      <div class="card">
-                                          <img class="img-fluid" alt="100%x280" src="media/ProjectSteam.png">
-                                          <div class="card-body">
-                                              <h4 class="card-title">Special title treatment</h4>
-                                              <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                                          </div>
-                                      </div>
-                                  </div>
-                              </div>
-                          </div>
+                        </div>
                       </div>
-                      <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="sr-only">Previous</span>
-                      </a>
-                      <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="sr-only">Next</span>
-                      </a>
+                      <div class="col-md-3 mb-3">
+                        <div class="card">
+                          <img class="img-fluid" alt="100%x280" src="media/ProjectSteam.png">
+                          <div class="card-body">
+                            <h4 class="card-title">Special title treatment</h4>
+                            <p class="card-text">With supporting text below as a natural lead-in to additional content.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-3 mb-3">
+                        <div class="card">
+                          <img class="img-fluid" alt="100%x280" src="media/ProjectSteam.png">
+                          <div class="card-body">
+                            <h4 class="card-title">Special title treatment</h4>
+                            <p class="card-text">With supporting text below as a natural lead-in to additional content.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-3 mb-3">
+                        <div class="card">
+                          <img class="img-fluid" alt="100%x280" src="media/ProjectSteam.png">
+                          <div class="card-body">
+                            <h4 class="card-title">Special title treatment</h4>
+                            <p class="card-text">With supporting text below as a natural lead-in to additional content.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                   </div>
+                  <div class="carousel-item">
+                    <div class="row">
+                      <div class="col-md-3 mb-3">
+                        <div class="card">
+                          <img class="img-fluid" alt="100%x280" src="media/ProjectSteam.png">
+                          <div class="card-body">
+                            <h4 class="card-title">Special title treatment</h4>
+                            <p class="card-text">With supporting text below as a natural lead-in to additional content.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-3 mb-3">
+                        <div class="card">
+                          <img class="img-fluid" alt="100%x280" src="media/ProjectSteam.png">
+                          <div class="card-body">
+                            <h4 class="card-title">Special title treatment</h4>
+                            <p class="card-text">With supporting text below as a natural lead-in to additional content.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-3 mb-3">
+                        <div class="card">
+                          <img class="img-fluid" alt="100%x280" src="media/ProjectSteam.png">
+                          <div class="card-body">
+                            <h4 class="card-title">Special title treatment</h4>
+                            <p class="card-text">With supporting text below as a natural lead-in to additional content.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-3 mb-3">
+                        <div class="card">
+                          <img class="img-fluid" alt="100%x280" src="media/ProjectSteam.png">
+                          <div class="card-body">
+                            <h4 class="card-title">Special title treatment</h4>
+                            <p class="card-text">With supporting text below as a natural lead-in to additional content.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="sr-only">Next</span>
+                </a>
               </div>
+            </div>
           </div>
-      </div>
+        </div>
       </section>
     </div>
 
@@ -393,7 +368,7 @@
       </div>
     </div>
     <div class="row carrusel">
-      
+
       Espacio reservado para carrusel
     </div>
 
@@ -411,7 +386,7 @@
       </div>
     </div>
     <div class="row carrusel">
-      
+
       Espacio reservado para carrusel
     </div>
 
@@ -429,19 +404,19 @@
       </div>
     </div>
     <div class="row carrusel">
-      
+
       Espacio reservado para carrusel
     </div>
   </div>
-  
+
   <!-- Footer-->
   <footer class="row footer">
     <div class="col-md-3">
-      <img class = "img-fluid logo" src="media/logo_azul.png">
+      <img class="img-fluid logo" src="media/logo_azul.png">
     </div>
     <div class="col-md-3">
       <a href="#">Sobre nosotros</a>
-        <a href="#">Contacto</a>
+      <a href="#">Contacto</a>
     </div>
     <div class="col-md-3">
       <a href="#">Atención al cliente</a>
@@ -453,21 +428,16 @@
     </div>
   </footer>
 
-    <script
-      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-      crossorigin="anonymous"
-    ></script>
-    <script src="js/projectSteam.js"></script>
-  </body>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+  <script src="js/projectSteam.js"></script>
+</body>
+
 </html>
