@@ -139,7 +139,7 @@ h2{
 }
 
 .content h1{
-    /*color: var(--morado);*/
+    color: grey;
     font-size: 25px;
     font-weight: bold;
     font-variant: all-small-caps;
