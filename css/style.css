@@ -52,6 +52,7 @@ h2{
 .row.top_bar h1{
     font-size: 30px;
     font-weight: bold;
+    font-family: 'Shrikhand', cursive;
 }
 
 .row.top_bar h1, .row.top_bar h2{
@@ -89,6 +90,45 @@ h2{
 
 #nav_buttons input:hover{
     opacity: 0.8;
+}
+
+/*MODAL INICIAR SESION*/
+.bgPurple{
+    background-color: var(--my-purple);
+    color: white;
+}
+
+.socialMediaButton {
+    text-align: left;
+    margin-bottom: 5%;
+}
+
+#socialMediaIcons{
+    width: 7%;
+}
+
+.link {
+    text-decoration: underline;
+    margin-bottom: 2%;
+}
+
+.link:hover{
+    color: var(--my-purple);
+    text-decoration: underline;
+}
+
+.signUpButton{
+    background-color: rgba(167,123, 255, 0.2) ;
+}
+
+.signUpButton:hover {
+    background-color: rgba(167,123, 255, 1) ;
+    color: white;
+}
+
+#imgModal {
+    object-fit: cover;
+    height: 100%
 }
 
 /* CONTENEDOR PRINCIPAL */
@@ -170,4 +210,7 @@ footer a{
     padding-top: 1%;  
     color: var(--morado);
 }
+
+/**/
+
 
