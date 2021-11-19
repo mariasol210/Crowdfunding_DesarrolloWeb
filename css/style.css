@@ -25,17 +25,19 @@ h1{
 h2{
     margin: 0;
     padding-top: 0.75%;
+    padding-bottom: 0.75%;
     font-size: 15px;
 }
 
 /* TOP */
-.row.top_bar{
-    justify-content: space-between;
-    border-bottom: 1px solid #e9ecef
+.top_bar{
+    display: grid;
+    grid-template-columns: 3fr 2fr 3fr;
+    border-bottom: 1px solid #e9ecef;
+    padding: 1% 1%;
 }
 
-.col-md-5.top_buttons {
-    align-items: center;
+#top_buttons {
     text-align: end;
     margin: auto 0;
 }
@@ -46,22 +48,24 @@ h2{
 
 .logo {
     position: relative;
-    width: 12vw;
-    padding-block: 1%;
+    height: 80px;
+    width: auto;
+    margin-block: auto;
+    justify-self: center;
 }
 
-.row.top_bar h1{
+.top_bar h1{
     font-size: 30px;
     font-weight: bold;
     font-family: 'Shrikhand', cursive;
 }
 
-.row.top_bar h1, .row.top_bar h2{
+.top_bar h1, .top_bar h2{
     color: var(--morado);
 }
 
 /* NAVEGACIÓN */
-.nav_container h1, .nav_container h2{
+.nav_container h1, .nav_container h2, .nav_container p{
     color: white;
 }
 
@@ -83,15 +87,28 @@ h2{
     width: 90%;
 }
 
-#nav_buttons{
+.nav_buttons{
     display: flex;
     margin-top: 3%;
     justify-content: space-evenly;
 }
 
-#nav_buttons input:hover{
+.nav_buttons input{
+    width: 10vw;
+    max-width: 80px;
+    height: auto;
+}
+
+.nav_buttons p{
+    margin-bottom: 0;
+    font-size: 1.2vw;
+}
+
+.nav_buttons input:hover{
     opacity: 0.8;
 }
+
+
 
 /*MODAL INICIAR SESION*/
 .bgPurple{
@@ -242,4 +259,6 @@ footer a{
 
 /**/
 
-
+@media only screen and (max-width: 600px){
+    
+}
