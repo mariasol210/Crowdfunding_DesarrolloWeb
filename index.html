@@ -260,22 +260,22 @@
   <div class="container-fluid content">
     <!-- Mas populares-->
     <div class="row destacado_titulo">
-      <div class="col-md-5">
+      <div class="col-md-5 destacado_texto">
         <h1>Más populares</h1>
       </div>
-      <div class="col-md-2">
+      <div class="col-md-2 destacado_boton">
         <button type="button" class="btn bgPurple">Ver más</button>
       </div>
     </div>
     <div class="row destacado">
-      <div class="col-md-5">
+      <div class="col-md-5 columna_imagen">
         <a href="#">
           <img class="img-fluid"
             alt="https://www.kickstarter.com/projects/91367227/tether-projecting-safe-zones-around-bikes?ref=section-design-tech-featured-project"
             src="media/p_tether.png" />
         </a>
       </div>
-      <div class="col-md-7">
+      <div class="col-md-7 columna_texto">
         <a href="#">
           <h3>tether - protegiendo zonas seguras alrededor de bicicletas</h3>
         </a>
@@ -296,7 +296,7 @@
 
     <!-- Carrusel-->
     <section class="pt-5">
-      <div class="container">
+      <div class="container contenedor_carrusel">
         <div class="row carrusel">
           <div class="col-md-12">
             <div id="carouselExampleControls" class="carousel slide">
@@ -561,44 +561,117 @@
   <div class="container-fluid colored_container">
     <h1>Sobre nosotros</h1>
     <h2>Conócenos</h2>
-    <img src="media/icono_manos.png" style = "margin-top: 3%; width: 60px; height: auto">
+    <img src="media/icono_manos.png" style="margin-top: 3%; width: 60px; height: auto">
   </div>
 
   <!-- About us content-->
-  <div class="container-fluid content">
-    <h1>¿Quienes somos?</h1>
-    <h1>¿Qué hacemos? Crowdfunding personal o social</h1>
-    <h1>¿Qué son los proyectos STEAM y por qué financiarlos?</h1>
-    <h1>¿Cómo participar?</h1>
-    <h1>Nuestros logros</h1>
-  </div>
+  <div class="container-fluid content about_us">
 
-  <!-- Footer-->
-  <footer class="row footer">
-    <div class="col-md-3">
-      <img class="img-fluid logo" src="media/logo_azul.png" />
+    <!-- ¿Quienes somos?-->
+    <div class="row about_us_titulo">
+      <div class="col-md-12">
+        <h1>¿Quienes somos?</h1>
+        <h2>Project Steam</h2>
+      </div>
     </div>
-    <div class="col-md-3">
-      <a href="#">Atención al cliente</a>
-      <a href="#">Términos y condiciones</a>
-      <a href="#">Contacto</a>
+    <div class="row about_us_info">
+      <div class="col-md-12">
+        <img class="img-fluid" src="media/ProjectSteam_negro.gif">
+        <p class="about_us_texto">Project STEAM es una plataforma de crowdfunding dedicada a crear oportunidades para
+          aquellas personas pertenecientes al colectivo STEAM: oportunidades de éxito, de darse a conocer, de ser
+          reconocidas, de sacar el mejor partido a sus conocimientos y creatividad y, lo más importante, oportunidades
+          de hacer un sueño realidad. Sol no me juzgues me lo he inventado :c
+        </p>
+      </div>
     </div>
-    <div class="col-md-3">
-      <a href="#">Idioma</a>
-      <a href="#">Moneda</a>
-    </div>
-  </footer>
 
-  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-    crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-    crossorigin="anonymous"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-    crossorigin="anonymous"></script>
-  <script src="js/projectSteam.js"></script>
+    <!-- ¿Que hacemos?-->
+    <div class="row about_us_titulo">
+      <div class="col-md-12">
+        <h1>¿Qué hacemos?</h1>
+        <h2>Crowdfunding personal o social</h2>
+      </div>
+    </div>
+    <div class="row about_us_info">
+      <div class="col-md-12">
+        <img class="img-fluid" src="media/startup.jpeg">
+        <p class="about_us_texto">El crowdfunding es un tipo de financiación colectiva (también llamado micromecenazgo)
+          en la que a través de pequeñas aportaciones de los usuarios se financian proyectos o iniciativas. Básicamente,
+          nos encargamos de poner en contacto a personas que tienen ideas y necesitan financiación con otras que están
+          dispuestas a invertir y necesitan esas ideas.
+        </p>
+      </div>
+    </div>
+
+    <!-- Proyectos STEAM-->
+    <div class="row about_us_titulo">
+      <div class="col-md-12 columna_about_us_titulo">
+        <h1>¿Qué son los proyectos STEAM?</h1>
+        <h2>¿Por qué financiarlos?</h2>
+      </div>
+    </div>
+    <div class="row about_us_info">
+      <div class="col-md-12">
+        <img class="img-fluid" src="media/imagen_steam.jpg">
+        <p class="about_us_texto">Son proyectos que provienen de las áreas de ciencia, tecnología, ingeniería, artes y matemáticas. Estos campos tienen como objetivo la innovación, el pensamiento crítico y la utilización de la ingeniería o la tecnología en diseños imaginativos o enfoques creativos para problemas del mundo real mientras se construyen sobre la base de las matemáticas y las ciencias. Estos campos han tenido especial crecimiento durante los últimos años por su potencial. Por esto mismo hemos creado esta plataforma, para aprovechar esos conocimientos y dar impulso a lo que podría ser la tecnología y la ciencia del futuro.
+        </p>
+      </div>
+    </div>
+
+    <!-- Participar-->
+    <div class="row about_us_titulo">
+      <div class="col-md-12">
+        <h1>¿Cómo comenzar?</h1>
+        <h2>Financiar y ser financiado</h2>
+      </div>
+    </div>
+    <div class="row about_us_info">
+      <div class="col-md-12">
+        <img class="img-fluid" src="media/cerdito.jpg">
+        <p class="about_us_texto">
+      </div>
+    </div>
+
+    <!-- Logros-->
+    <div class="row about_us_titulo">
+      <div class="col-md-12">
+        <h1>Nuestros logros</h1>
+        <h2>Qué hemos conseguido hasta ahora</h2>
+      </div>
+    </div>
+    <div class="row about_us_info">
+      <div class="col-md-12">
+        <img class="img-fluid" src="media/logros.jpg">
+        <p class="about_us_texto">
+      </div>
+    </div>
+
+    <!-- Footer-->
+    <footer class="row footer">
+      <div class="col-md-3">
+        <img class="img-fluid logo" src="media/logo_azul.png" />
+      </div>
+      <div class="col-md-3">
+        <a href="#">Atención al cliente</a>
+        <a href="#">Términos y condiciones</a>
+        <a href="#">Contacto</a>
+      </div>
+      <div class="col-md-3">
+        <a href="#">Idioma</a>
+        <a href="#">Moneda</a>
+      </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"></script>
+    <script src="js/projectSteam.js"></script>
 </body>
 
 </html>

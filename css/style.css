@@ -166,7 +166,7 @@ h2{
     padding-block: 1.5%;
 }
 
-.row content{
+.row .content{
     margin-right: 0;
     margin-left: 0;
 }
@@ -174,18 +174,20 @@ h2{
 .destacado_titulo{
     justify-content: space-between;
     margin-block: 3%;
+    margin-inline: 0;
 }
 
-.destacado_titulo .col-md-2, .destacado_titulo .col-md-5{
+.destacado_boton, .destacado_texto{
     width:auto;
+    padding-inline: 0;
 }
 
-.destacado_titulo .col-md-2{
+.destacado_boton{
     display: flex;
     justify-content: right;
 }
 
-.destacado_titulo button{
+.destacado_boton button{
     height: fit-content;
 }
 
@@ -216,12 +218,12 @@ h2{
     }   
 }
 
-.destacado .col-md-5{
+.destacado .columna_imagen{
     padding-right: 0;
     padding-left: 0;
 }
 
-.destacado .col-md-7{
+.destacado .columna_texto{
     padding-block: 3%;
     padding-inline: 5%;
 }
@@ -238,6 +240,12 @@ h2{
 .progress-bar{
     border-radius: 0.25rem;
     background-color: var(--morado);
+}
+
+.contenedor_carrusel {
+    padding: 0;
+    margin:0;
+    max-width: 100%;
 }
 
 .carrusel{
@@ -308,8 +316,40 @@ h2{
 
 
 /* ABOUT US */
-.about_us_intro{
-    margin-top: 0;
+.about_us{
+    text-align: center;
+}
+
+.about_us h1{
+    padding-top: 2%;
+    padding-bottom: 0.5%;
+    color: var(--morado);
+}
+
+.about_us h2{
+    padding: 0;
+    font-size: 15px;
+    color: gray;
+    font-variant: all-small-caps;
+}
+
+.about_us img{
+    width: 50%;
+    height: auto;
+    margin-block: 3%;
+    border-radius: 20px;
+}
+
+.about_us_texto {
+    margin-top: 4%;
+    background-color: var(--colorClaro);
+    border-radius: 20px;
+    border-width: 0;
+    padding-inline: 5%;
+    padding-block: 5%;
+    width: 90%;
+    margin-inline: auto;
+    font-size: 15px;
 }
 
 
