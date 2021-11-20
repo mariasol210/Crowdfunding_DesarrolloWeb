@@ -10,6 +10,9 @@
     --amarilloSteam: #ffeb3f; 
     --naranjaSteam: #fd9b1e; 
     --rojoSteam: #ff3838;
+
+    /* Relleno */
+    --colorClaro: #f8f9f9;
 }
 
 body{
@@ -189,7 +192,7 @@ h2{
 .destacado{ 
     text-align: left;
     border-radius: 15px;
-    background-color: #f8f9f9;
+    background-color: var(--colorClaro);
     margin-inline: 0;
 }
 
@@ -233,7 +236,6 @@ h2{
 }
 
 .progress-bar{
-    width: 70%;
     border-radius: 0.25rem;
     background-color: var(--morado);
 }
@@ -249,23 +251,26 @@ h2{
     padding-inline: 0px;
 }
 
-.carousel-item .card{
+.card{
     border-radius: 15px;
     border-width: 0px;
     height: 100%;
-    background-color: #f8f9f9;
+    background-color: var(--colorClaro);
 }
 
-.card-text{
-    display: none;
+.card-body{
+    display: grid;
+    grid-template-rows: 2fr 3fr 0.5fr;
 }
 
-.carousel-item .card h4{
+.card-title{
     font-size: 1rem;
 }
 
-.carousel-item .card p{
-    font-size: 15px;
+.card-text{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 0.75rem;
 }
 
 .carrusel img{
@@ -274,6 +279,28 @@ h2{
     height: 20vh;
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
+}
+
+.card-footer{
+    padding: 0;
+    border-top-width: 0px;
+    background-color: var(--colorClaro);
+}
+
+.carousel-control-prev {
+    left: -11%;
+}
+
+.carousel-control-next {
+    right: -11%;
+}
+
+.carousel-control-prev-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23A77BFF' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E");
+}
+
+.carousel-control-next-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='%23A77BFF' width='8' height='8' viewBox='0 0 8 8'%3e%3cpath d='M2.75 0l-1.5 1.5L3.75 4l-2.5 2.5L2.75 8l4-4-4-4z'/%3e%3c/svg%3e");
 }
 
 
