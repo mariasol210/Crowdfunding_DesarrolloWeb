@@ -68,15 +68,15 @@ h2{
 }
 
 /* NAVEGACIÓN */
-.nav_container h1, .nav_container h2, .nav_container p{
+.colored_container h1, .colored_container h2, .colored_container p{
     color: white;
 }
 
-.nav_container h1{
+.colored_container h1 {
     font-weight: bold;
 }
 
-.nav_container {
+.colored_container {
     text-align: center;
     background-image: url("../media/degradado.png");
     background-size: auto 100%;
@@ -85,7 +85,7 @@ h2{
     border-top-right-radius: 10px;    
 }
 
-.nav_container, .content{
+.colored_container, .content {
     padding-block: 3%;
     width: 90%;
 }
@@ -263,13 +263,16 @@ h2{
     grid-template-rows: 2fr 3fr 0.5fr;
 }
 
+.card-body a{
+    display: grid;
+    align-items: center;
+}
+
 .card-title{
     font-size: 1rem;
 }
 
 .card-text{
-    overflow: hidden;
-    text-overflow: ellipsis;
     font-size: 0.75rem;
 }
 
@@ -302,6 +305,13 @@ h2{
 .carousel-control-next-icon {
     background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='%23A77BFF' width='8' height='8' viewBox='0 0 8 8'%3e%3cpath d='M2.75 0l-1.5 1.5L3.75 4l-2.5 2.5L2.75 8l4-4-4-4z'/%3e%3c/svg%3e");
 }
+
+
+/* ABOUT US */
+.about_us_intro{
+    margin-top: 0;
+}
+
 
 
 /* FOOTER */
