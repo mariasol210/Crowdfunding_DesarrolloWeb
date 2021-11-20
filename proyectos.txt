@@ -1,0 +1,110 @@
+   <!-- Nuevos favoritos-->
+    <div class="row destacado_titulo">
+      <div class="col-md-5">
+        <h1>Nuevos favoritos</h1>
+      </div>
+      <div class="col-md-2">
+        <button type="button" class="btn bgPurple">
+          Ver más
+        </button>
+      </div>
+    </div>
+    <div class="row destacado">
+      <div class="col-md-5">
+        <a href="#">
+          <img class="img-fluid"
+            alt="https://www.kickstarter.com/projects/ufactory/ufactory-lite-6-most-affordable-collaborative-robot-arm?ref=section-homepage-featured-project"
+            src="media/p_ufactory.png">
+        </a>
+      </div>
+      <div class="col-md-7">
+        <a href="#">
+          <h3>UFACTORY Lite 6 – El brazo robotico colaborativo más asequible</h3>
+        </a>
+        <p>Hoy en día, los robots se utilizan mucho en las grandes fábricas. Son caros, grandes y pesados, trabajan
+          principalmente en tareas pesadas. Sin embargo, pocos de ellos están diseñados para tareas ligeras y
+          económicas. Esto plantea un verdadero desafío para mantener un rápido retorno de la inversión en estas tareas
+          mediante el uso de robots. Un brazo robótico duradero y asequible con accesorios de calidad industrial es
+          clave.</p>
+        <div class="progress">
+          <div class="progress-bar" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
+            20%
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Recta final-->
+    <div class="row destacado_titulo">
+      <div class="col-md-5">
+        <h1>Recta final</h1>
+      </div>
+      <div class="col-md-2">
+        <button type="button" class="btn bgPurple">
+          Ver más
+        </button>
+      </div>
+    </div>
+    <div class="row destacado">
+      <div class="col-md-5">
+        <a href="#">
+          <img class="img-fluid" alt="https://www.gofundme.com/f/cortometraje-y-si-pudieses-elegir"
+            src="media/p_cortoElegir.png">
+        </a>
+      </div>
+      <div class="col-md-7">
+        <a href="#">
+          <h3>Cortometraje "¿Y si pudieses elegir?</h3>
+        </a>
+        <p>Un grupo de apasionados del cine vamos a grabar un corto y necesitamos lo básico para pagar a actores,
+          alquilar el local y equipo necesario.
+          Contribuye para apoyar la cultura!!
+          Cualquier ayuda de 5 o 10 euros será perfecta, no es necesario más! Eso es casi como tomarse dos o tres
+          refrescos!
+          Si haces una donación pública, te incluiremos en los créditos finales.</p>
+        <div class="progress">
+          <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
+            90%
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Últimas oportunidades-->
+    <div class="row destacado_titulo">
+      <div class="col-md-5">
+        <h1>últimas oportunidades</h1>
+      </div>
+      <div class="col-md-2">
+        <button type="button" class="btn bgPurple">
+          Ver más
+        </button>
+      </div>
+    </div>
+    <div class="row destacado">
+      <div class="col-md-5">
+        <a href="#">
+          <img class="img-fluid"
+            alt="https://www.kickstarter.com/projects/scilynk/scilynk-a-new-era-for-science?ref=discovery&term=science"
+            src="media/p_sciLynk.png">
+        </a>
+      </div>
+      <div class="col-md-7">
+        <a href="#">
+          <h3>SciLynk: Una nueva era para la ciencia</h3>
+        </a>
+        <p>Nuestro objetivo es crear una red de acceso abierto donde las barreras físicas de las instituciones ya no
+          separen a las mentes más brillantes del mundo. Imagine un mundo en el que los departamentos de investigación
+          de Stanford, Harvard, MIT, Oxford y más están conectados; donde puedan compartir investigaciones y encontrar
+          los descubrimientos del mañana. Donde los estudiantes de todo el mundo puedan compartir sus ideas, hacer
+          preguntas y ampliar sus conocimientos científicos.
+          No solo una red, sino un centro que encarna los valores más puros de investigación, colaboración, educación y
+          conexión.</p>
+        <div class="progress">
+          <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">
+            80%
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

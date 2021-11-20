@@ -77,9 +77,9 @@ h2{
     text-align: center;
     background-image: url("../media/degradado.png");
     background-size: auto 100%;
-    margin-top: 0.75%;
+    margin-top: 1%;
     border-top-left-radius: 10px;
-    border-top-right-radius: 10px;      
+    border-top-right-radius: 10px;    
 }
 
 .nav_container, .content{
@@ -163,23 +163,54 @@ h2{
     padding-block: 1.5%;
 }
 
-.destacado{ 
+.row content{
     margin-right: 0;
     margin-left: 0;
+}
+
+.destacado_titulo{
+    justify-content: space-between;
+    margin-block: 3%;
+}
+
+.destacado_titulo .col-md-2, .destacado_titulo .col-md-5{
+    width:auto;
+}
+
+.destacado_titulo .col-md-2{
+    display: flex;
+    justify-content: right;
+}
+
+.destacado_titulo button{
+    height: fit-content;
+}
+
+.destacado{ 
     text-align: left;
     border-radius: 15px;
     background-color: #f8f9f9;
+    margin-inline: 0;
 }
 
-.destacado, .destacado img{
-    height: 40vh;
+.destacado a, .card a{
+    text-decoration: none;
+    color: #212529;
 }
 
 .destacado img{
-    object-fit: cover; 
+    object-fit: cover;
     width: 100%;
-    border-bottom-left-radius: 15px;
-    border-top-left-radius: 15px;
+    height: max-content;
+    border-radius: 1rem 1rem 0 0;
+}
+
+@media screen and (min-width: 48em){
+    .destacado img{
+        width: 100%;
+        height: 100%;
+        border-radius: 1rem 0 0 1rem;
+    }   
 }
 
 .destacado .col-md-5{
@@ -198,20 +229,24 @@ h2{
 
 .destacado p{
     margin: 2% auto;
-    height: 60%;    
+    height: auto;    
 }
 
-.destacado button{
-    float: right;
-
+.progress-bar{
+    width: 70%;
+    border-radius: 0.25rem;
+    background-color: var(--morado);
 }
 
 .carrusel{
+    margin-block: 5%;
+    margin-inline: 0;
     justify-content: center;
+    border-radius: 15px;
 }
 
-.carousel-inner{
-    height: 60%;
+.carrusel .col-md-12{
+    padding-inline: 0px;
 }
 
 .carousel-item .card{
@@ -221,8 +256,12 @@ h2{
     background-color: #f8f9f9;
 }
 
+.card-text{
+    display: none;
+}
+
 .carousel-item .card h4{
-    font-size: 20px;
+    font-size: 1rem;
 }
 
 .carousel-item .card p{
