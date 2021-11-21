@@ -372,14 +372,14 @@ h2{
 
 
 /* FOOTER */
-footer{
+.footer_container{
     border-top: 1px solid #e9ecef;   
-    margin-top: 0.75%;
+    margin-top: 2%;
     padding-block: 1%;
-    justify-content: space-evenly;
-    margin: -10px -10px;
+    padding: 2% 1%;
+    margin-inline: 0px;
 }
-footer .col-md-3{
+.footer_columna{
     margin-top: auto;
     margin-bottom: auto;
     text-align: center;
