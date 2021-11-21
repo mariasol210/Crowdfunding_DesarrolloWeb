@@ -152,6 +152,40 @@ h2{
     height: 100%
 }
 
+/* SEARCH MODAL */
+.modal-dialog{
+    margin-top: 0;
+    margin-inline: 0;
+}
+.modal-content{
+    width: 100vw;
+    border-radius: 0px;
+    border-width: 0px;
+    height: 10vh;
+    display: flex;
+    justify-content: space-between;
+}
+.modal-header{
+    margin-inline: 5%;
+    height: 10vh;
+}
+
+.search-bar{
+    width: 80vw;
+    margin: auto 3% auto 3%;
+    border-width: 0;
+    border-radius: 0;
+    border-bottom: solid 1px gray;
+    font-size: 15px;
+    color: gray;
+}
+.modal-header textarea:focus, input:focus {
+    outline: 0;
+    border-bottom-width: 2px;
+    border-bottom-color: #8c6cb8;
+    transition: color 1s border-bottom-width 1s;
+}
+
 /* CONTENEDOR PRINCIPAL */
 .content {   
     padding-inline: 3%;
@@ -388,10 +422,4 @@ footer a{
     display: block;
     padding-top: 1%;  
     color: var(--morado);
-}
-
-/**/
-
-@media only screen and (max-width: 600px){
-    
 }
