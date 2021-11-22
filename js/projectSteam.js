@@ -31,7 +31,26 @@ $(document).ready(function() {
     
 });
 
+function getURL() {
+    document.getElementById("copiedMessage").innerHTML = ""
+    let linkfield = document.getElementById("clipboardLink");
+    linkfield.value= window.location.href ;
+}
 
+function copyURLtoClipboard() {
+    /* Get the text field */
+    let copyText = document.getElementById("clipboardLink");
+  
+    /* Select the text field */
+    copyText.select();
+    copyText.setSelectionRange(0, 99999); /* For mobile devices */
+  
+     /* Copy the text inside the text field */
+    navigator.clipboard.writeText(copyText.value);
+  
+    /* Alert the copied text */
+    document.getElementById("copiedMessage").innerHTML = "¡Copiado!"
+  }
 
 
 
