@@ -641,20 +641,38 @@
 
   <!-- Footer-->
   <div class="container-fluid">
-  <footer class="row footer">
-    <div class="col-md-3">
-      <img class="img-fluid logo" src="media/logo_multicolor.png" />
-    </div>
-    <div class="col-md-3">
-      <a href="#">Atención al cliente</a>
-      <a href="#">Términos y condiciones</a>
-      <a href="#">Contacto</a>
-    </div>
-    <div class="col-md-3">
-      <a href="#">Idioma</a>
-      <a href="#">Moneda</a>
-    </div>
- </footer>
+    <footer class="row footer_container">
+      <div class="col-md-3 footer_columna">
+        <img class="img-fluid logo" src="media/logo_multicolor.png" />
+      </div>
+      <div class="col-md-6 footer_columna">
+        <a href="#">Atención al cliente</a>
+        <a href="#">Términos y condiciones</a>
+        <a href="#">Contacto</a>
+      </div>
+      <div class="col-md-3 footer_columna">
+        <div class="dropdown show">
+          <a class="btn dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Idioma
+          </a>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+            <a class="dropdown-item" href="#">Inglés</a>
+            <a class="dropdown-item" href="#">Francés</a>
+            <a class="dropdown-item" href="#">Español</a>
+          </div>
+        </div>
+        <div class="dropdown show">
+          <a class="btn dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Moneda
+          </a>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+            <a class="dropdown-item" href="#">Libra</a>
+            <a class="dropdown-item" href="#">Euro</a>
+            <a class="dropdown-item" href="#">Dólar</a>
+          </div>
+        </div>
+      </div>
+    </footer>
 </div>
   
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
