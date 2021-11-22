@@ -600,11 +600,3 @@ input::-webkit-inner-spin-button {
     transform: translateX(-0px) translateY(-15px);
     font-size: 12px
 }
-.terms a{
-    color: black;
-    decorar
-}
-
-.terms a:hover{ 
-    color: var(--morado);
-}
