@@ -1,18 +1,17 @@
 <!DOCTYPE html>
-<html lang="es">
-
+<html lang="en">
 <head>
-  <title>Project STEAM</title>
-  <meta charset="utf-8" />
-  <meta name="authors" content="Maria Sol Torres L & Teodora Nikolaeva" />
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nombre del proyecto</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
     integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
-  <link href="css/style.css" rel="stylesheet" />
-
+    <link href="css/style.css" rel="stylesheet" />
+    
 </head>
-
 <body>
-  <!-- Top container -->
+    <!-- Top container -->
   <div class="container-fluid" id="top_bar">
     <div class="top_bar">
       <div style="margin-block: auto">
@@ -210,7 +209,7 @@
               </div>
 
               <div class="col-sm-6 d-none d-lg-block">
-                <img src="media/signInModal.jpeg" class="img-fluid" id="imgModal" alt="Porject setam logo" />
+                <img src="media/signInModal.jpeg" class="img-fluid" id="imgModal" alt="Project setam logo" />
               </div>
             </div>
           </div>
@@ -218,81 +217,169 @@
       </div>
     </div>
   </div>
+    
+  <!-- header and donations info-->
+  <div class="container-fluid" id="project_header">
+        <h1>Tether - protegiendo zonas seguras alrededor de bicicletas</h1>
+        <p>Un dispositivo de seguridad de bicicleta conectado; una luz, sensor y comunicador que hace que las carreteras sean más seguras, menos estresantes y más felices.</p>
+    <div class="row project">
+        <div class="col">
+          <div class="row">
+            <!-- Project picture-->
+            <div class="col">
+              <img class="img-fluid"
+          alt="https://www.kickstarter.com/projects/91367227/tether-projecting-safe-zones-around-bikes?ref=section-design-tech-featured-project"
+          src="media/p_tether.png" />
+            </div>
+            
+          </div>
 
-  <!-- Navigation bar-->
-  <div class="container-fluid colored_container">
-    <h1>Descubre proyectos</h1>
-    <h2>Explora nuestras categorías</h2>
-    <div class="nav_buttons">
-      <div>
-        <input type="image" name="para_ti" src="media/para_ti.png" alt="para_ti" />
-        <p>Para ti</p>
+          <!-- Projct author-->
+          <div class="row" style="margin-top: 3%;">
+            <div class="col"><span>user </span><span id="autor">AYUNTAMIENTO DE TAZACORTE </span> es la persona que organiza esta recaudación de fondos.</div>
+          </div>
+          
+          <div class="row">
+            <div class="col"><hr /></div>
+          </div>
+
+          <!-- Project's Date and tags-->
+          <div class="row">
+            <div class="col">Fecha de creación: <span id="fecha">12 de noviembre de 2021 </span> </div> |
+            <div class="col"> <span>tag </span> <a id="tag" href="#">Engineering </a> </div>
+          </div>
+
+          <div class="row">
+            <div class="col"><hr /></div>
+          </div>
+
+          <!-- Project description-->
+          <div class="row" style="margin-bottom: 5%;">
+            <div class="col">
+              <p><b>tether:</b> carreteras más seguras, impulsadas por ciclistas <br>
+                <br>Un dispositivo de seguridad para bicicletas que proyecta una zona segura alrededor de su bicicleta, responde a los usuarios de la carretera que lo rodean, identificando carreteras seguras e inseguras en su ciudad. 
+                <br>Creemos que el ciclismo es la mejor manera de viajar por una ciudad. También puede ser realmente peligroso y estresante. 
+                <br>Los pasos cercanos adelantando a los automóviles son la mayor causa de accidentes fatales o graves que involucran a ciclistas. La furia vial está en aumento ya que la comunicación entre ciclistas y automovilistas es limitada, y tenemos poca comprensión de la ruta más segura para andar en bicicleta a través de nuestra ciudad. Tether se inventó para resolver este problema y conectarse a una nueva comunidad que crea carreteras más seguras para todos cuanto más lo usan.
+                <br>
+                <br><b>¿Qué hace?</b>   
+                
+                <ul>
+                  <li>Tether se adhiere a su manillar y proyecta lo que llamamos 'La Burbuja' una zona segura alrededor de su bicicleta, alentando a los conductores a darle suficiente espacio a medida que adelantan.</li>
+                  <li>Los sensores integrados monitorean y detectan continuamente a otros usuarios de la carretera y vehículos que adelantan, publicando esto en tiempo real en una aplicación complementaria.</li>
+                  <li>Las ubicaciones de los adelantamientos se registran para identificar zonas seguras e inseguras en su ciudad para ayudar a planificar rutas más seguras.</li>
+                </ul>
+                </p>
+            </div>
+          </div>
+
+          <!-- Donate or share buttons-->
+          <div class="row" style="margin-bottom: 10%;">
+            <div class="col">
+              <button type="button" class="btn bgPink btn-lg btn-block">Patrocinar</button>
+            </div>
+            <div class="col">
+              <button type="button" class="btn bgPurple btn-lg btn-block">Compartir</button>
+            </div>
+          </div>
+
+         <!-- Organizer contact-->
+         <div class="row">
+          <div class="col"><h3><b>Organizador</b></h3></div>
+         </div>
+         <div class="row"><div class="col"><hr /></div></div>
+          
+         <div class="row" style="margin-bottom: 6%;">
+          <div class="col-2">
+            <a>imagen</a>
+          </div>
+          <div class="col">
+            <p id=#autor> AYUNTAMIENTO DE TAZACORTE
+              <br>Organizador
+              <br><span id=#ubicacion> Tazacorte </span>
+            </p>
+          </div>
+          <div class="col-2">
+            <button type="button" class="btn bgPurple contactButton" data-toggle="modal" data-target="#contactModal">
+              Contacto
+            </button>
+          </div>
+         </div>
+
+          <!-- Last donations-->
+          <div class="row">
+            <div class="col"><h3><b>Últimas aportaciones </b></h3></div>
+           </div>
+           <div class="row"><div class="col"><hr /></div></div>
+          
+           <div class="row">
+              <div class="col-2">
+                <a>imagen</a>
+              </div>
+              <div class="col">
+                <p id=#sponsor1> Ana Salinas Collantes
+                  <br><span id=#money1> 20</span>€
+                </p>
+              </div>
+          </div>
+          <div class="row"><div class="col"><hr /></div></div>
+
+          <div class="row">
+            <div class="col-2">
+              <a>imagen</a>
+            </div>
+            <div class="col">
+              <p id=#sponsor2> Maria de los ángeles Muñoz iglesias
+                <br><span id=#money1> 70</span>€
+              </p>
+            </div>
+        </div>
+        <div class="row"><div class="col"><hr /></div></div>
+
+        <div class="row">
+          <div class="col-2">
+            <a>imagen</a>
+          </div>
+          <div class="col">
+            <p id=#sponsor2> Lorenzo García Marcos
+              <br><span id=#money1> 50</span>€
+            </p>
+          </div>
+        </div>
+
+
       </div>
-      <div>
-        <input type="image" name="ciencia" src="media/ciencia.png" alt="ciencia" />
-        <p>Ciencia</p>
-      </div>
-      <div>
-        <input type="image" name="tech" src="media/tech.png" alt="tecnologia" />
-        <p>Tecnología</p>
-      </div>
-      <div>
-        <input type="image" name="ingenieria" src="media/ingenieria.png" alt="ingenieria" />
-        <p>Ingeniería</p>
-      </div>
-      <div>
-        <input type="image" name="arte" src="media/arte.png" alt="arte" />
-        <p>Arte</p>
-      </div>
-      <div>
-        <input type="image" name="mates" src="media/mates.png" alt="matematicas" />
-        <p>Matemáticas</p>
-      </div>
+
+         <!-- Donations sidebar-->
+        <div class="col-4 d-none d-md-block donations">
+            <div class="row sidebar"  >
+              <div class="col bg-light ">
+                <div class="row progress" style="margin-bottom: 3%; margin-top: 5%;">
+                  <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"
+                      style="width: 70%">
+                  </div>        
+              </div>
+              <div class="row"><h3>1500€</h3></div>
+              <div class="row"><p>recaudados de 3400€</p></div>
+              <div class="row"><h3>85</h3></div>
+              <div class="row"><p>patrocinadores</p></div>
+              <div class="row"><h3>5</h3></div>
+              <div class="row"><p>días más</p></div>
+              <div class="row align-items-end" > <button type="button" class="btn bgPink btn-lg btn-block" style="margin-bottom: 4%;">Patrocinar</button></div>
+              <div class="row align-items-end"> <button type="button" class="btn bgPurple btn-lg btn-block" style="margin-bottom: 4%;">Compartir</button></div>
+              </div>
+            </div>
+            
+  
+
+        </div>
     </div>
   </div>
 
-  <!-- Main content-->
-  <div class="container-fluid content">
-    <!-- Mas populares-->
-    <div class="row destacado_titulo">
-      <div class="col-md-5 destacado_texto">
-        <h1>Más populares</h1>
-      </div>
-      <div class="col-md-2 destacado_boton">
-        <button type="button" class="btn bgPurple">Ver más</button>
-      </div>
-    </div>
-    <div class="row destacado">
-      <div class="col-md-5 columna_imagen">
-        <a href="#">
-          <img class="img-fluid"
-            alt="https://www.kickstarter.com/projects/91367227/tether-projecting-safe-zones-around-bikes?ref=section-design-tech-featured-project"
-            src="media/p_tether.png" />
-        </a>
-      </div>
-      <div class="col-md-7 columna_texto">
-        <a href="#">
-          <h3>tether - protegiendo zonas seguras alrededor de bicicletas</h3>
-        </a>
-        <p>
-          Un dispositivo de seguridad para bicicletas que proyecta una zona
-          segura alrededor de su bicicleta, responde a los usuarios de la
-          carretera a su alrededor, identificando carreteras seguras e
-          inseguras en su ciudad.
-        </p>
-        <div class="progress">
-          <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"
-            style="width: 70%">
-            70%
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Carrusel-->
-    <section class="pt-5">
+  <!-- Other projects carrousel -->
+  <section class="pt-5">
       <div class="container contenedor_carrusel">
         <div class="row carrusel">
+          <p>También te puede interesar</p>
           <div class="col-md-12">
             <div id="carouselExampleControls" class="carousel slide">
               <div class="carousel-inner">
@@ -552,121 +639,33 @@
     </section>
   </div>
 
-  <!-- About us bar-->
-  <div class="container-fluid colored_container">
-    <h1>Sobre nosotros</h1>
-    <h2>Conócenos</h2>
-    <img src="media/icono_manos.png" style="margin-top: 3%; width: 60px; height: auto">
-  </div>
-
-  <!-- About us content-->
-  <div class="container-fluid content about_us">
-
-    <!-- ¿Quienes somos?-->
-    <div class="row about_us_titulo">
-      <div class="col-md-12">
-        <h1>¿Quienes somos?</h1>
-        <h2>Project Steam</h2>
-      </div>
+  <!-- Footer-->
+  <div class="container-fluid">
+  <footer class="row footer">
+    <div class="col-md-3">
+      <img class="img-fluid logo" src="media/logo_multicolor.png" />
     </div>
-    <div class="row about_us_info">
-      <div class="col-md-12">
-        <img class="img-fluid" src="media/ProjectSteam_negro.gif">
-        <p class="about_us_texto">Project STEAM es una plataforma de crowdfunding dedicada a crear oportunidades para
-          aquellas personas pertenecientes al colectivo STEAM: oportunidades de éxito, de darse a conocer, de ser
-          reconocidas, de sacar el mejor partido a sus conocimientos y creatividad y, lo más importante, oportunidades
-          de hacer un sueño realidad. Sol no me juzgues me lo he inventado :c
-        </p>
-      </div>
+    <div class="col-md-3">
+      <a href="#">Atención al cliente</a>
+      <a href="#">Términos y condiciones</a>
+      <a href="#">Contacto</a>
     </div>
-
-    <!-- ¿Que hacemos?-->
-    <div class="row about_us_titulo">
-      <div class="col-md-12">
-        <h1>¿Qué hacemos?</h1>
-        <h2>Crowdfunding personal o social</h2>
-      </div>
+    <div class="col-md-3">
+      <a href="#">Idioma</a>
+      <a href="#">Moneda</a>
     </div>
-    <div class="row about_us_info">
-      <div class="col-md-12">
-        <img class="img-fluid" src="media/startup.jpeg">
-        <p class="about_us_texto">El crowdfunding es un tipo de financiación colectiva (también llamado micromecenazgo)
-          en la que a través de pequeñas aportaciones de los usuarios se financian proyectos o iniciativas. Básicamente,
-          nos encargamos de poner en contacto a personas que tienen ideas y necesitan financiación con otras que están
-          dispuestas a invertir y necesitan esas ideas.
-        </p>
-      </div>
-    </div>
-
-    <!-- Proyectos STEAM-->
-    <div class="row about_us_titulo">
-      <div class="col-md-12 columna_about_us_titulo">
-        <h1>¿Qué son los proyectos STEAM?</h1>
-        <h2>¿Por qué financiarlos?</h2>
-      </div>
-    </div>
-    <div class="row about_us_info">
-      <div class="col-md-12">
-        <img class="img-fluid" src="media/imagen_steam.jpg">
-        <p class="about_us_texto">Son proyectos que provienen de las áreas de ciencia, tecnología, ingeniería, artes y matemáticas. Estos campos tienen como objetivo la innovación, el pensamiento crítico y la utilización de la ingeniería o la tecnología en diseños imaginativos o enfoques creativos para problemas del mundo real mientras se construyen sobre la base de las matemáticas y las ciencias. Estos campos han tenido especial crecimiento durante los últimos años por su potencial. Por esto mismo hemos creado esta plataforma, para aprovechar esos conocimientos y dar impulso a lo que podría ser la tecnología y la ciencia del futuro.
-        </p>
-      </div>
-    </div>
-
-    <!-- Participar-->
-    <div class="row about_us_titulo">
-      <div class="col-md-12">
-        <h1>¿Cómo comenzar?</h1>
-        <h2>Financiar y ser financiado</h2>
-      </div>
-    </div>
-    <div class="row about_us_info">
-      <div class="col-md-12">
-        <img class="img-fluid" src="media/cerdito.jpg">
-        <p class="about_us_texto">
-      </div>
-    </div>
-
-    <!-- Logros-->
-    <div class="row about_us_titulo">
-      <div class="col-md-12">
-        <h1>Nuestros logros</h1>
-        <h2>Qué hemos conseguido hasta ahora</h2>
-      </div>
-    </div>
-    <div class="row about_us_info">
-      <div class="col-md-12">
-        <img class="img-fluid" src="media/logros.jpg">
-        <p class="about_us_texto">
-      </div>
-    </div>
-
-    <!-- Footer-->
-    <footer class="row footer">
-      <div class="col-md-3">
-        <img class="img-fluid logo" src="media/logo_multicolor.png" />
-      </div>
-      <div class="col-md-3">
-        <a href="#">Atención al cliente</a>
-        <a href="#">Términos y condiciones</a>
-        <a href="#">Contacto</a>
-      </div>
-      <div class="col-md-3">
-        <a href="#">Idioma</a>
-        <a href="#">Moneda</a>
-      </div>
-    </footer>
-
+ </footer>
+</div>
+  
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-      crossorigin="anonymous"></script>
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-      crossorigin="anonymous"></script>
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-      crossorigin="anonymous"></script>
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
     <script src="js/projectSteam.js"></script>
 </body>
-
 </html>
