@@ -21,7 +21,7 @@
       </div>
       <img class="img-fluid logo" src="media/logo_multicolor.png" />
       <div id="top_buttons">
-        <button type="button" class="btn search_button">
+        <button type="button" class="btn search_button" data-toggle="modal" data-target="#searchModal">
           <img src="media/search.png" style="width: 24px" />
         </button>
         <!-- Button trigger modal -->
@@ -219,6 +219,22 @@
     </div>
   </div>
 
+  <!-- Modal to search-->
+  <div class = "modal fade" id="searchModal" tabindex="-1" role="dialog" aria-labelledby="SignInModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header" id="signInHeader">
+          <img src="media/search.png" style="width: 26px; margin: auto auto 5px auto;">
+          <input class="search-bar shadow-none" type="text" placeholder="Buscar..">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <!-- Navigation bar-->
   <div class="container-fluid colored_container">
     <h1>Descubre proyectos</h1>
@@ -280,6 +296,10 @@
           carretera a su alrededor, identificando carreteras seguras e
           inseguras en su ciudad.
         </p>
+        <div>
+          <img class="time_icon" src="media/time_icon_gray.png">
+          <p class="time_text">32 dias 8h</p>
+        </div>
         <div class="progress">
           <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"
             style="width: 70%">
@@ -301,7 +321,7 @@
                     <div class="col-md-3 col-sm-6 mb-3">
                       <div class="card">
                         <a href="#">
-                          <img class="img-fluid"
+                          <img class="img-fluid carrusel_img"
                             alt="https://www.kickstarter.com/projects/105659142/atomic-size-matters?ref=discovery&term=chemistry"
                             src="media/p_chemistrymatters.png" />
                         </a>
@@ -316,6 +336,10 @@
                             sólido... en forma de cómic.
                           </p>
                           <div class="card-footer">
+                            <div>
+                              <img class="time_icon" src="media/time_icon_gray.png">
+                              <p class="time_text">48 dias 23h</p>
+                            </div>
                             <div class="progress">
                               <div class="progress-bar" role="progressbar" aria-valuenow="68" aria-valuemin="0"
                                 aria-valuemax="100" style="width: 68%">
@@ -329,7 +353,7 @@
                     <div class="col-md-3 col-sm-6 mb-3">
                       <div class="card">
                         <a href="#">
-                          <img class="img-fluid"
+                          <img class="img-fluid carrusel_img"
                             alt="https://www.kickstarter.com/projects/xscapistlj/comixscape-collection-1?ref=section-comics-illustration-featured-project"
                             src="media/p_comic.png" />
                         </a>
@@ -346,6 +370,10 @@
                             lectores nuevos y antiguos!
                           </p>
                           <div class="card-footer">
+                            <div>
+                              <img class="time_icon" src="media/time_icon_gray.png">
+                              <p class="time_text">25 dias 7h</p>
+                            </div>
                             <div class="progress">
                               <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0"
                                 aria-valuemax="100" style="width: 75%">
@@ -359,7 +387,7 @@
                     <div class="col-md-3 col-sm-6 mb-3">
                       <div class="card">
                         <a href="#">
-                          <img class="img-fluid"
+                          <img class="img-fluid carrusel_img"
                             alt="https://www.kickstarter.com/projects/980681112/bunny-numbers-game-helps-children-to-be-confident-in-maths?ref=discovery&term=math"
                             src="media/p_bunny.png" />
                         </a>
@@ -376,6 +404,10 @@
                             disfrutarás aprendiendo matemáticas
                           </p>
                           <div class="card-footer">
+                            <div>
+                              <img class="time_icon" src="media/time_icon_gray.png">
+                              <p class="time_text">77 dias 1h</p>
+                            </div>
                             <div class="progress">
                               <div class="progress-bar" role="progressbar" aria-valuenow="88" aria-valuemin="0"
                                 aria-valuemax="100" style="width: 88%">
@@ -389,7 +421,7 @@
                     <div class="col-md-3 col-sm-6 mb-3">
                       <div class="card">
                         <a href="#">
-                          <img class="img-fluid"
+                          <img class="img-fluid carrusel_img"
                             alt="https://www.kickstarter.com/projects/1450781303/bonjour-smart-alarm-clock-with-artificial-intellig?ref=discovery&term=smart%20clock"
                             src="media/p_bonjour.png" />
                         </a>
@@ -405,6 +437,10 @@
                             Bonjour le ayuda a aprovechar al máximo cada día.
                           </p>
                           <div class="card-footer">
+                            <div>
+                              <img class="time_icon" src="media/time_icon_gray.png">
+                              <p class="time_text">51 dias 4h</p>
+                            </div>
                             <div class="progress">
                               <div class="progress-bar" role="progressbar" aria-valuenow="71" aria-valuemin="0"
                                 aria-valuemax="100" style="width: 71%">
@@ -422,7 +458,7 @@
                     <div class="col-md-3 col-sm-6 mb-3">
                       <div class="card">
                         <a href="#">
-                          <img class="img-fluid"
+                          <img class="img-fluid carrusel_img"
                             alt="https://www.kickstarter.com/projects/deckrx/deckrx-the-deckbuilding-racing-videogame?ref=discovery&term=videogame"
                             src="media/p_deckrx.png" />
                         </a>
@@ -439,6 +475,10 @@
                             los videojuegos de carreras.
                           </p>
                           <div class="card-footer">
+                            <div>
+                              <img class="time_icon" src="media/time_icon_gray.png">
+                              <p class="time_text">29 dias 6h</p>
+                            </div>
                             <div class="progress">
                               <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0"
                                 aria-valuemax="100" style="width: 85%">
@@ -452,7 +492,7 @@
                     <div class="col-md-3 col-sm-6 mb-3">
                       <div class="card">
                         <a href="#">
-                          <img class="img-fluid" alt="100%x280" src="media/p_stempower.png" />
+                          <img class="img-fluid carrusel_img" alt="100%x280" src="media/p_stempower.png" />
                         </a>
                         <div class="card-body">
                           <a href="#">
@@ -466,6 +506,10 @@
                             mensuales para niños de 3 a 8 años.
                           </p>
                           <div class="card-footer">
+                            <div>
+                              <img class="time_icon" src="media/time_icon_gray.png">
+                              <p class="time_text">24 dias 17h</p>
+                            </div>
                             <div class="progress">
                               <div class="progress-bar" role="progressbar" aria-valuenow="89" aria-valuemin="0"
                                 aria-valuemax="100" style="width: 89%">
@@ -479,7 +523,7 @@
                     <div class="col-md-3 col-sm-6 mb-3">
                       <div class="card">
                         <a href="#">
-                          <img class="img-fluid"
+                          <img class="img-fluid carrusel_img"
                             alt="https://www.kickstarter.com/projects/newhamptonschool/the-class-that-harnessed-the-wind-0?ref=discovery&term=engineering"
                             src="media/p_wind.png" />
                         </a>
@@ -495,6 +539,10 @@
                             una turbina eólica en funcionamiento.
                           </p>
                           <div class="card-footer">
+                            <div>
+                              <img class="time_icon" src="media/time_icon_gray.png">
+                              <p class="time_text">21 dias 23h</p>
+                            </div>
                             <div class="progress">
                               <div class="progress-bar" role="progressbar" aria-valuenow="77" aria-valuemin="0"
                                 aria-valuemax="100" style="width: 77%">
@@ -508,7 +556,7 @@
                     <div class="col-md-3 col-sm-6 mb-3">
                       <div class="card">
                         <a href="#">
-                          <img class="img-fluid"
+                          <img class="img-fluid carrusel_img"
                             alt="https://www.kickstarter.com/projects/2045724330/kenneth-mbenes-soil-chemistry-report?ref=discovery&term=chemistry"
                             src="media/p_chemistryreport.png" />
                         </a>
@@ -524,6 +572,10 @@
                             de Camerún.
                           </p>
                           <div class="card-footer">
+                            <div>
+                              <img class="time_icon" src="media/time_icon_gray.png">
+                              <p class="time_text">44 dias 9h</p>
+                            </div>
                             <div class="progress">
                               <div class="progress-bar" role="progressbar" aria-valuenow="91" aria-valuemin="0"
                                 aria-valuemax="100" style="width: 91%">
@@ -575,7 +627,7 @@
         <p class="about_us_texto">Project STEAM es una plataforma de crowdfunding dedicada a crear oportunidades para
           aquellas personas pertenecientes al colectivo STEAM: oportunidades de éxito, de darse a conocer, de ser
           reconocidas, de sacar el mejor partido a sus conocimientos y creatividad y, lo más importante, oportunidades
-          de hacer un sueño realidad. Sol no me juzgues me lo he inventado :c
+          de hacer un sueño realidad.
         </p>
       </div>
     </div>
@@ -608,7 +660,12 @@
     <div class="row about_us_info">
       <div class="col-md-12">
         <img class="img-fluid" src="media/imagen_steam.jpg">
-        <p class="about_us_texto">Son proyectos que provienen de las áreas de ciencia, tecnología, ingeniería, artes y matemáticas. Estos campos tienen como objetivo la innovación, el pensamiento crítico y la utilización de la ingeniería o la tecnología en diseños imaginativos o enfoques creativos para problemas del mundo real mientras se construyen sobre la base de las matemáticas y las ciencias. Estos campos han tenido especial crecimiento durante los últimos años por su potencial. Por esto mismo hemos creado esta plataforma, para aprovechar esos conocimientos y dar impulso a lo que podría ser la tecnología y la ciencia del futuro.
+        <p class="about_us_texto">Son proyectos que provienen de las áreas de ciencia, tecnología, ingeniería, artes y
+          matemáticas. Estos campos tienen como objetivo la innovación, el pensamiento crítico y la utilización de la
+          ingeniería o la tecnología en diseños imaginativos o enfoques creativos para problemas del mundo real mientras
+          se construyen sobre la base de las matemáticas y las ciencias. Estos campos han tenido especial crecimiento
+          durante los últimos años por su potencial. Por esto mismo hemos creado esta plataforma, para aprovechar esos
+          conocimientos y dar impulso a lo que podría ser la tecnología y la ciencia del futuro.
         </p>
       </div>
     </div>
@@ -624,6 +681,13 @@
       <div class="col-md-12">
         <img class="img-fluid" src="media/cerdito.jpg">
         <p class="about_us_texto">
+          Dar a conocer tu proyecto es muy sencillo: inicia sesión o regístrate en nuestra plataforma, utiliza nuestras
+          plantillas de proyecto, rellena la información requerida y hazlo público. Una vez hecho esto, solo tienes que
+          esperar y ver cómo se llena tu barra de progreso con donaciones.
+          <br>
+          En cambio, si lo que quieres es ayudar con la financiación de un proyecto, puedes empezar explorando nuestras
+          categorías o buscando por algún tema que te interese. Para donar deberás iniciar sesión o registrarte.
+        </p>
       </div>
     </div>
 
@@ -638,35 +702,61 @@
       <div class="col-md-12">
         <img class="img-fluid" src="media/logros.jpg">
         <p class="about_us_texto">
+          Desde nuestra inauguración hemos conseguido impulsar más de 200.000 proyectos STEAM.
+          <br>
+          Nuestros patrocinadores superan los 20 millones, de los cuales 7 ya han financiado varios proyectos.
+          <br>
+          Nos complace anunciar que tenemos un índice de éxito de casi un 50%, lo que nos hace una de las plataformas
+          crowdfunding más exitosas.
+        </p>
       </div>
     </div>
+  </div>
 
-    <!-- Footer-->
-    <footer class="row footer">
-      <div class="col-md-3">
-        <img class="img-fluid logo" src="media/logo_multicolor.png" />
+  <!-- Footer-->
+  <footer class="row footer_container">
+    <div class="col-md-3 footer_columna">
+      <img class="img-fluid logo" src="media/logo_multicolor.png" />
+    </div>
+    <div class="col-md-6 footer_columna">
+      <a href="#">Atención al cliente</a>
+      <a href="#">Términos y condiciones</a>
+      <a href="#">Contacto</a>
+    </div>
+    <div class="col-md-3 footer_columna">
+      <div class="dropdown show">
+        <a class="btn dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Idioma
+        </a>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+          <a class="dropdown-item" href="#">Inglés</a>
+          <a class="dropdown-item" href="#">Francés</a>
+          <a class="dropdown-item" href="#">Español</a>
+        </div>
       </div>
-      <div class="col-md-3">
-        <a href="#">Atención al cliente</a>
-        <a href="#">Términos y condiciones</a>
-        <a href="#">Contacto</a>
+      <div class="dropdown show">
+        <a class="btn dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Moneda
+        </a>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+          <a class="dropdown-item" href="#">Libra</a>
+          <a class="dropdown-item" href="#">Euro</a>
+          <a class="dropdown-item" href="#">Dólar</a>
+        </div>
       </div>
-      <div class="col-md-3">
-        <a href="#">Idioma</a>
-        <a href="#">Moneda</a>
-      </div>
-    </footer>
+    </div>
+  </footer>
 
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-      crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-      crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-      crossorigin="anonymous"></script>
-    <script src="js/projectSteam.js"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+  <script src="js/projectSteam.js"></script>
 </body>
 
 </html>

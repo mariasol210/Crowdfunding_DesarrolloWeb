@@ -153,6 +153,40 @@ h2{
     height: 100%
 }
 
+/* SEARCH MODAL */
+.modal-dialog{
+    margin-top: 0;
+    margin-inline: 0;
+}
+.modal-content{
+    width: 100vw;
+    border-radius: 0px;
+    border-width: 0px;
+    height: 10vh;
+    display: flex;
+    justify-content: space-between;
+}
+.modal-header{
+    margin-inline: 5%;
+    height: 10vh;
+}
+
+.search-bar{
+    width: 80vw;
+    margin: auto 3% auto 3%;
+    border-width: 0;
+    border-radius: 0;
+    border-bottom: solid 1px gray;
+    font-size: 15px;
+    color: gray;
+}
+.modal-header textarea:focus, input:focus {
+    outline: 0;
+    border-bottom-width: 2px;
+    border-bottom-color: #8c6cb8;
+    transition: color 1s border-bottom-width 1s;
+}
+
 /* CONTENEDOR PRINCIPAL */
 .content {   
     padding-inline: 3%;
@@ -204,7 +238,7 @@ h2{
     color: #212529;
 }
 
-.destacado img{
+.columna_imagen img{
     object-fit: cover;
     width: 100%;
     height: max-content;
@@ -212,7 +246,7 @@ h2{
 }
 
 @media screen and (min-width: 48em){
-    .destacado img{
+    .columna_imagen img{
         width: 100%;
         height: 100%;
         border-radius: 1rem 0 0 1rem;
@@ -285,7 +319,7 @@ h2{
     font-size: 0.75rem;
 }
 
-.carrusel img{
+.carrusel_img{
     object-fit: cover; 
     width: 100%;
     height: 20vh;
@@ -300,11 +334,13 @@ h2{
 }
 
 .carousel-control-prev {
-    left: -11%;
+    left: -9%;
+    width: 10%
 }
 
 .carousel-control-next {
-    right: -11%;
+    right: -9%;
+    width: 10%
 }
 
 .carousel-control-prev-icon {
@@ -313,6 +349,21 @@ h2{
 
 .carousel-control-next-icon {
     background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='%23A77BFF' width='8' height='8' viewBox='0 0 8 8'%3e%3cpath d='M2.75 0l-1.5 1.5L3.75 4l-2.5 2.5L2.75 8l4-4-4-4z'/%3e%3c/svg%3e");
+}
+
+.time_icon{
+    height: 16px; 
+    width: auto; 
+    border-radius: 0;
+    border-width: 0px;
+    opacity: 0.8;
+}
+
+.time_text{
+    display:inline-flex;
+    font-size: 12px;
+    color: gray;
+    margin-block: 2%;
 }
 
 
@@ -354,16 +405,15 @@ h2{
 }
 
 
-
 /* FOOTER */
-footer{
+.footer_container{
     border-top: 1px solid #e9ecef;   
-    margin-top: 0.75%;
-    padding-block: 1%;                              
-    justify-content: space-evenly;
-    margin: 0 0;
+    margin-top: 2%;
+    padding-block: 1%;
+    padding: 2% 1%;
+    margin-inline: 0px;
 }
-footer .col-md-3{
+.footer_columna{
     margin-top: auto;
     margin-bottom: auto;
     text-align: center;
@@ -377,7 +427,6 @@ footer a{
 footer a:hover{ 
     color: var(--morado);
 }
-
 /**/
 
 @media only screen and (max-width: 600px){
