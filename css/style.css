@@ -22,6 +22,8 @@ body{
     font-family: 'Montserrat', sans-serif;
 }
 
+
+
 h1{
     margin: 0;
     font-size: 35px;
@@ -435,8 +437,6 @@ footer a:hover{
 
 /*PAGINA PROYECTOS*/
 #project_header{
-    padding-left: 60px;
-    padding-right: 60px;
     text-align: center;
     position: relative;
     margin: 15px auto;
@@ -453,7 +453,7 @@ footer a:hover{
 .project img{
     object-fit: cover;
     width: 100%;
-    height: 90%;
+    height: 100%;
     border-radius: 1rem 0 0 1rem;
 }
 
@@ -471,6 +471,7 @@ footer a:hover{
 }
 
 .sidebar{
+    position: -webkit-sticky;
     position: sticky; /*Esto es para que el sidebar se deslize segun se mueva el contenido*/
     margin-left: 1px;
     top: 2rem;
