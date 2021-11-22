@@ -152,15 +152,15 @@ h2{
 
 #imgModal {
     object-fit: cover;
-    height: 100%
+    height: 100%;
 }
 
 /* SEARCH MODAL */
-.modal-dialog{
+#searchModal .modal-dialog{
     margin-top: 0;
     margin-inline: 0;
 }
-.modal-content{
+#searchModal .modal-content{
     width: 100vw;
     border-radius: 0px;
     border-width: 0px;
@@ -168,7 +168,7 @@ h2{
     display: flex;
     justify-content: space-between;
 }
-.modal-header{
+#searchModal .modal-header{
     margin-inline: 5%;
     height: 10vh;
 }
@@ -182,7 +182,7 @@ h2{
     font-size: 15px;
     color: gray;
 }
-.modal-header textarea:focus, input:focus {
+#searchModal .modal-header textarea:focus, input:focus {
     outline: 0;
     border-bottom-width: 2px;
     border-bottom-color: #8c6cb8;

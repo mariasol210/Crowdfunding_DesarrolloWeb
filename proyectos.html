@@ -20,9 +20,8 @@
       </div>
       <img class="img-fluid logo" src="media/logo_multicolor.png" />
       <div id="top_buttons">
-        <button type="button" class="btn search_button">
+        <button type="button" class="btn search_button" data-toggle="modal" data-target="#searchModal">
           <img src="media/search.png" style="width: 24px" />
-        </button>
         <!-- Button trigger modal -->
         <button type="button" class="btn bgPurple signInButton" data-toggle="modal" data-target="#signInModal">
           Iniciar sesión
@@ -217,6 +216,22 @@
       </div>
     </div>
   </div>
+
+ <!-- Modal to search-->
+ <div class = "modal fade" id="searchModal" tabindex="-1" role="dialog" aria-labelledby="SignInModalLabel"
+ aria-hidden="true">
+ <div class="modal-dialog modal-lg" role="document">
+   <div class="modal-content">
+     <div class="modal-header" id="signInHeader">
+       <img src="media/search.png" style="width: 26px; margin: auto auto 5px auto;">
+       <input class="search-bar shadow-none" type="text" placeholder="Buscar..">
+       <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+         <span aria-hidden="true">&times;</span>
+       </button>
+     </div>
+   </div>
+ </div>
+</div>
     
   <!-- header and donations info-->
   <div class="container-fluid container" id="project_header">
@@ -637,6 +652,7 @@
     </section>
   </div>
 
+   <!--Categories -->
   <div class="container-fluid container">
     <div class="nav_buttons">
       <div>
@@ -665,6 +681,7 @@
       </div>
     </div>
   </div>
+
   <!-- Modal to show contact info-->
     <div class="modal fade" id="contactModal" role="dialog">
       <div class="modal-dialog">
@@ -673,7 +690,7 @@
         <div class="modal-content">
           <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal">&times;</button>
-            <h4 class="modal-title">Modal Header</h4>
+            <h4 class="modal-title" id="signInHeader">Modal Header</h4>
           </div>
           <div class="modal-body">
             <p>Some text in the modal.</p>
