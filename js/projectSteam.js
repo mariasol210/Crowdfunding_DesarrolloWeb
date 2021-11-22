@@ -1,5 +1,11 @@
+
+
 $(document).ready(function() {
-   
+  
+    //The sign up form will be hidden by default
+    $('#signUpModalContent').hide(); 
+    $('#forgotPassContent').hide(); 
+
     //The sign up button will hide the sign in content and show the sign up form
     $(".signUpButton").click(function() {
         $('#signInModalContent').hide(); 
@@ -22,10 +28,9 @@ $(document).ready(function() {
         $('#forgotPassContent').show();
     })
 
-    //The sign up form will be hidden by default
-    $('#signUpModalContent').hide(); 
-    $('#forgotPassContent').hide(); 
+    
 });
+
 
 
 

@@ -132,6 +132,7 @@ h2{
 .link {
     text-decoration: underline;
     margin-bottom: 2%;
+    color: #212529;
 }
 
 .link:hover{
@@ -435,14 +436,14 @@ footer a:hover{
 }
 
 /*PAGINA PROYECTOS*/
-#project_header{
-    text-align: center;
-    position: relative;
-    margin: 15px auto;
-}
 #project_header h1 {
     font-weight: bold;
     font-size: xx-large;
+    text-align: center;
+}
+
+#project_header h2{
+    text-align: center;
 }
 
 .project{
@@ -459,15 +460,6 @@ footer a:hover{
 .donations .row{
     margin-right: 0;
     margin-left: 0;
-}
-
-.project a{
-    color: black;
-}
-
-.project a:hover{
-    color:var(--morado);
-    text-decoration: underline;
 }
 
 .project p, .project ul{
@@ -489,4 +481,130 @@ footer a:hover{
 .bgPink{
     background-color: var(--rosa);
     color: white;
+}
+
+/*PAGINA DONATIVO*/
+.slider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 15px;
+  border-radius: 5px;  
+  background: grey;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+/*webkit is to override Safari, Edge, Chrome and Opera default look*/
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%; 
+  background: var(--rosa);
+  cursor: pointer;
+}
+/*moz is to override Firefox default look*/
+.slider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: var(--rosa);
+  cursor: pointer;
+}
+/*payment method tabs*/
+.nav-tabs {
+    border: none !important
+}
+
+.nav-tabs .nav-link.active {
+    color: #495057;
+    background-color: #fff;
+    border-color: #ffffff #ffffff #fff;
+    border-top: 3px solid var(--amarillo) !important
+}
+
+.nav-tabs .nav-link {
+    margin-bottom: -1px;
+    border: 1px solid transparent;
+    border-top-left-radius: 0rem;
+    border-top-right-radius: 0rem;
+    border-top: 3px solid #eee;
+    font-size: 20px
+}
+
+.nav-tabs .nav-link:hover {
+    border-color: #e9ecef #ffffff #ffffff
+}
+
+.nav-tabs {
+    display: table !important;
+    width: 100%
+}
+
+.nav-item {
+    display: table-cell
+}
+
+.tab-content .form-control {
+    border-bottom: 1px solid #eee !important;
+    border: none;
+    font-weight: 600
+}
+
+.tab-content .form-control:focus {
+    color: #495057;
+    background-color: #fff;
+    border-color: #8bbafe;
+    outline: 0;
+    box-shadow: none
+}
+
+.inputbox {
+    position: relative;
+    margin-bottom: 20px;
+    width: 100%
+}
+
+/*inputbox label*/
+.inputbox span {
+    position: absolute;
+    top: 7px;
+    left: 11px;
+    transition: 0.5s
+}
+
+/*card number eye*/
+.inputbox i {
+    position: absolute;
+    top: 13px;
+    right: 8px;
+    transition: 0.5s;
+    color: #3F51B5
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0
+}
+
+.inputbox input:focus~span {
+    transform: translateX(-0px) translateY(-15px);
+    font-size: 12px
+}
+
+.inputbox input:valid~span {
+    transform: translateX(-0px) translateY(-15px);
+    font-size: 12px
+}
+.terms a{
+    color: black;
+    decorar
+}
+
+.terms a:hover{ 
+    color: var(--morado);
 }
