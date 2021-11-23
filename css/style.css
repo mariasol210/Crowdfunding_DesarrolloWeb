@@ -224,7 +224,7 @@ h2{
     justify-content: right;
 }
 
-.destacado_boton button{
+.btn_ver_mas{
     height: fit-content;
 }
 
@@ -388,14 +388,14 @@ h2{
 }
 
 .about_us img{
-    width: 50%;
+    width: 30%;
     height: auto;
     margin-block: 3%;
     border-radius: 20px;
 }
 
 .about_us_texto {
-    margin-top: 4%;
+    margin-top: 2%;
     background-color: var(--colorClaro);
     border-radius: 20px;
     border-width: 0;
@@ -436,13 +436,13 @@ footer a:hover{
 }
 
 /*PAGINA PROYECTOS*/
-#project_header h1 {
+.project_header h1 {
     font-weight: bold;
     font-size: xx-large;
     text-align: center;
 }
 
-#project_header h2{
+.project_header h2{
     text-align: center;
 }
 

@@ -50,7 +50,27 @@ function copyURLtoClipboard() {
   
     /* Alert the copied text */
     document.getElementById("copiedMessage").innerHTML = "¡Copiado!"
-  }
+}
+
+$('.search-bar').on('keydown', function(evt) {
+    // If enter is pressed and the value isn't empty
+    if(evt.keyCode == 13 && $(this).val() != ''){
+        search($(this).val());
+        $(this).val('');
+    }
+} );
+
+$('.btn_ver_mas').click(function(evt) {
+    // Get category
+    $categoria = "para ti";
+    search($categoria);
+} ); 
+
+function search(val){
+    console.log(val);
+    window.location.href = "filtrado.html";
+}
+
 
 
 
