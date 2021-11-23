@@ -600,3 +600,8 @@ input::-webkit-inner-spin-button {
     transform: translateX(-0px) translateY(-15px);
     font-size: 12px
 }
+
+/* SEACH PAGE WITH RESULTS */
+.results_container .row{
+    margin-block: 2rem;
+}
