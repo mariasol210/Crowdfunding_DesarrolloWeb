@@ -112,7 +112,19 @@ h2{
     opacity: 0.8;
 }
 
+.profile_dropdown{
+    display: none;
+    width: 128px; 
+    color: gray;
+    padding-left: 0;
+    padding-right: 0;
+}
 
+.profile_name{
+    text-overflow: ellipsis;
+    overflow: hidden;
+    max-width: 100px;
+}
 
 /*MODAL INICIAR SESION*/
 .bgPurple{
@@ -426,13 +438,20 @@ footer a{
     color: grey;
 }
 
-footer a:hover{ 
+footer a:hover, footer a:focus, .profile_dropdown:focus, .profile_dropdown:hover { 
     color: var(--morado);
 }
-/**/
 
-@media only screen and (max-width: 600px){
-    
+.dropdown-item{
+    color: gray;
+}
+
+.dropdown-item:hover{
+    background-color: #d8d1e7;
+}
+
+.dropdown-item:focus{
+    background-color: #c8bed5;
 }
 
 /*PAGINA PROYECTOS*/

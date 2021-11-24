@@ -67,9 +67,17 @@ $('.btn_ver_mas').click(function(evt) {
 } ); 
 
 function search(val){
+    //TODO search in db
     console.log(val);
     window.location.href = "filtrado.html";
 }
+
+$('signInButtonInModal').click(function(evt){
+    //TODO check in db
+
+    $('signInButton').hide();
+    $('profile_dropdown').show();
+});
 
 
 
