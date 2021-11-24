@@ -6,6 +6,9 @@ $(document).ready(function() {
     $('#signUpModalContent').hide(); 
     $('#forgotPassContent').hide(); 
 
+    //Hide the profile dropdown by default
+    $(".profile_dropdown").hide();
+
     //The sign up button will hide the sign in content and show the sign up form
     $(".signUpButton").click(function() {
         $('#signInModalContent').hide(); 
@@ -28,7 +31,6 @@ $(document).ready(function() {
         $('#forgotPassContent').show();
     })
 
-    
 });
 
 function getURL() {
@@ -72,12 +74,23 @@ function search(val){
     window.location.href = "filtrado.html";
 }
 
-$('signInButtonInModal').click(function(evt){
+//TODO fix
+$('#signInButtonInModal').click(function(){
     //TODO check in db
-
-    $('signInButton').hide();
-    $('profile_dropdown').show();
+    //TODO once checked in, get a variable which will be used to load
+    //the profile dropdown on top of the screen
+    $('.signInButton').hide();
+    $('.profile_dropdown').show();
+    $('.close').click();
 });
+
+$('.log_out').on('click', function(){
+    //TODO
+    $('.signInButton').show();
+    $('.profile_dropdown').hide();
+})
+
+
 
 
 

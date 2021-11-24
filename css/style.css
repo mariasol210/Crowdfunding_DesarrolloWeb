@@ -42,7 +42,8 @@ h2{
 }
 
 #top_buttons {
-    text-align: end;
+    display: inline-flex;
+    justify-content: end; 
     margin: auto 0;
 }
 
@@ -113,7 +114,6 @@ h2{
 }
 
 .profile_dropdown{
-    display: none;
     width: 128px; 
     color: gray;
     padding-left: 0;
