@@ -677,3 +677,36 @@ input::-webkit-inner-spin-button {
         margin-inline: 2%;
     }
 } 
+
+/* SETTINGS */
+.settings .row{
+    align-items: center;
+    margin-inline: 0px;
+    justify-content: space-between;
+}
+
+.profile_pic_container{
+    width: 9rem;
+    border-radius: 50%;
+    padding-bottom: 2%;
+}
+
+.profile_pic_container .profile_pic{
+    object-fit: cover;
+    width: 100%;
+}
+.bgRed{
+    background-color: var(--rojoSteam);
+    color: white;
+}
+
+.settings p{
+    padding-block: 1%;
+    margin-bottom: 0;
+}
+.settings .col-md-4{
+    padding-inline: 0;
+}
+.settings input{
+    margin-block: 2%;
+}
