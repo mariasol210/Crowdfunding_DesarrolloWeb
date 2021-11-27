@@ -34,8 +34,8 @@
                     Registrate
                 </button>
                 <div class="dropdown show">
-                    <a class="btn dropdown-toggle profile_dropdown" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown"
-                        aria-haspopup="true" aria-expanded="false">
+                    <a class="btn dropdown-toggle profile_dropdown" href="#" role="button" id="dropdownMenuLink"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         <img class="img-fluid pr-1 profile_pic" src="media/profile_pic.png" style="width: 24px">
                         <span class="profile_name">Nombre</span>
                     </a>
@@ -134,8 +134,8 @@
                                                 <input type="password" class="form-control" id="Password1"
                                                     placeholder="Password" />
                                             </div>
-                                            <button type="button" class="btn bgPurple btn-lg btn-block" id="signInButtonInModal"
-                                                style="margin-bottom: 5%">
+                                            <button type="button" class="btn bgPurple btn-lg btn-block"
+                                                id="signInButtonInModal" style="margin-bottom: 5%">
                                                 Iniciar sesión
                                             </button>
                                         </form>
@@ -293,7 +293,8 @@
                 </div>
             </div>
             <div>
-                <button type="submit" class="btn bgPurple text-center">
+                <button type="submit" class="btn bgPurple text-center" data-toggle="modal"
+                    data-target="#uploadPicModal">
                     Subir foto
                 </button>
             </div>
@@ -307,7 +308,7 @@
         <div class="row">
             <p>Tu nombre sirve para presentarte ante el resto de usuarios. Recomendamos no cambiarlo con frecuencia.</p>
         </div>
-        <div class="row">   
+        <div class="row">
             <div class="col-md-4">
                 <input type="text" class="form-control" id="name">
             </div>
@@ -340,13 +341,15 @@
             </div>
         </div>
         <div class="row">
-            <p>Para cambiar la contraseña deberás proporcionar tu contraseña actual. Si la has olvidado, cierra sesión y reestablécela.</p>
+            <p>Para cambiar la contraseña deberás proporcionar tu contraseña actual. Si la has olvidado, cierra sesión y
+                reestablécela.</p>
         </div>
         <div class="row">
             <div class="col-md-4">
                 <input type="password" class="form-control" id="current_password" placeholder="Contraseña actual">
                 <input type="password" class="form-control" id="new_password" placeholder="Nueva contraseña">
-                <input type="password" class="form-control" id="password_confirmation" placeholder="Confirme la nueva contraseña">
+                <input type="password" class="form-control" id="password_confirmation"
+                    placeholder="Confirme la nueva contraseña">
             </div>
             <div>
                 <button type="submit" class="btn bgPurple text-center">
@@ -361,7 +364,8 @@
             </div>
         </div>
         <div class="row">
-            <p>Esta acción es irreversible. Se eliminarán todos tus datos y proyectos, y no podrás volver a iniciar sesión con la misma cuenta.</p>
+            <p>Esta acción es irreversible. Se eliminarán todos tus datos y proyectos, y no podrás volver a iniciar
+                sesión con la misma cuenta.</p>
         </div>
         <div class="row">
             <button class="btn bgRed" style="margin-right: auto; margin-left: auto;">
@@ -370,8 +374,34 @@
         </div>
     </div>
 
+    <!-- Modal to uploadPic-->
+    <div class="modal fade" id="uploadPicModal" tabindex="-1" role="dialog" aria-labelledby="uploadPicLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header" id="signInHeader">
+                    <h1>Editar imagen de perfil</h1>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <label for="pic_url">Inserta el enlace a una imagen de internet</label>
+                    </div>
+                    <div class="row pic_url_container">
+                        <input id="pic_url" class="col-md-12 form-control" type="text" placeholder="Añade tu url...">
+                    </div>
+                    <div class="row">
+                        <button type="submit" class="btn bgPurple" id="load_pic" onclick="load_pic()">
+                            Cargar
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
-    
     <!-- Footer-->
     <footer class="row footer_container">
         <div class="col-md-3 footer_columna">

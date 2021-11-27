@@ -710,3 +710,25 @@ input::-webkit-inner-spin-button {
 .settings input{
     margin-block: 2%;
 }
+
+/* UPLOAD PIC MODAL */
+#uploadPicModal .row{
+    margin-inline: 0;
+    margin-block: 2%;
+}
+
+#uploadPicModal {
+    margin-top: 10rem;
+    width: 40%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.pic_url_container{
+    justify-content: space-between;
+}
+
+#load_pic{
+    margin-left: auto;
+    margin-right: auto;
+}
