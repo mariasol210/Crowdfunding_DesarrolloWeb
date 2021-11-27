@@ -624,3 +624,56 @@ input::-webkit-inner-spin-button {
 .results_container .row{
     margin-block: 2rem;
 }
+
+/* MY PROJECTS PAGE */
+.vertical_line{
+    border-left: 1.5px solid #dfe0e2;
+    margin-block: 2%;
+}
+
+.mng_project{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 0;
+    margin-bottom: auto;
+}
+
+.mng_project_icons{
+    width: 32px;
+}
+
+.mng_project button{
+    background-color: transparent;
+}
+
+.mng_project_icons:hover{
+    opacity: 0.8;
+}
+
+.info_project{
+    margin-top: 10%;
+}
+
+.info_project h3{
+    font-weight: 300;
+}
+
+.info_project p{
+    margin-left: 0;
+}
+
+.info_project .row{
+    margin-left: 5%;
+    margin-right: 0;
+    margin-top: 1%;
+}
+
+@media only screen and (max-width: 768px){
+    .vertical_line{
+        border-top: 1.5px solid #dfe0e2 ;
+        border-left: 0;
+        padding-top: 5%;
+        margin-inline: 2%;
+    }
+} 
