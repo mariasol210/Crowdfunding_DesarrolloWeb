@@ -90,7 +90,18 @@ $('.log_out').on('click', function(){
     $('.profile_dropdown').hide();
 })
 
+//Funciones temporales hasta implementar php
+$('#editar').click(function() {
+    window.location.href = "edit_project.html";
+});
 
+$('#create_project_btn').click(function() {
+    window.location.href = "your_projects.html";
+});
+
+$('#edit_project_btn').click(function() {
+    window.location.href = "your_projects.html";
+});
 
 
 
