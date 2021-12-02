@@ -222,7 +222,7 @@ h2{
 
 .destacado_titulo{
     justify-content: space-between;
-    margin-block: 3%;
+    margin-block: 2%;
     margin-inline: 0;
 }
 
@@ -432,13 +432,13 @@ h2{
     margin-bottom: auto;
     text-align: center;
 }
-footer a{
+footer a, .nav a{
     display: block;
     padding-top: 1%;  
     color: grey;
 }
 
-footer a:hover, footer a:focus, .profile_dropdown:focus, .profile_dropdown:hover { 
+footer a:hover, footer a:focus, .profile_dropdown:focus, .profile_dropdown:hover, .nav a:hover, .nav a:focus { 
     color: var(--morado);
 }
 
