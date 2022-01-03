@@ -6,9 +6,6 @@ $(document).ready(function() {
     $('#signUpModalContent').hide(); 
     $('#forgotPassContent').hide(); 
 
-    //Hide the profile dropdown by default
-    $(".profile_dropdown").hide();
-
     //The sign up button will hide the sign in content and show the sign up form
     $(".signUpButton").click(function() {
         $('#signInModalContent').hide(); 
@@ -31,13 +28,24 @@ $(document).ready(function() {
         $('#forgotPassContent').show();
     })
 
+    //Open again the modal if the sign in was unsuccesful
+    if(document.body.contains(document.getElementById('errorSignIn'))){
+        $('#signIn').click();
+    }
+
+    //Open again the modal if the sign up was unsuccesful
+    if(document.body.contains(document.getElementById('errorSignUp'))){
+        $('#signIn').click();
+        $(".signUpButton").click();
+    }
+
 });
 
 function getURL() {
     document.getElementById("copiedMessage").innerHTML = ""
     let linkfield = document.getElementById("clipboardLink");
     linkfield.value= window.location.href ;
-}
+};
 
 function copyURLtoClipboard() {
     /* Get the text field */
@@ -52,7 +60,7 @@ function copyURLtoClipboard() {
   
     /* Alert the copied text */
     document.getElementById("copiedMessage").innerHTML = "¡Copiado!"
-}
+};
 
 $('.search-bar').on('keydown', function(evt) {
     // If enter is pressed and the value isn't empty
@@ -72,37 +80,6 @@ function search(val){
     //TODO search in db
     console.log(val);
     window.location.href = "filtrado.html";
-}
-
-//TODO fix
-$('#signInButtonInModal').click(function(){
-    //TODO check in db
-    //TODO once checked in, get a variable which will be used to load
-    //the profile dropdown on top of the screen
-    $('.signInButton').hide();
-    $('.profile_dropdown').show();
-    $('.close').click();
-});
-
-$('.log_out').on('click', function(){
-    //TODO
-    $('.signInButton').show();
-    $('.profile_dropdown').hide();
-})
-
-//Funciones temporales hasta implementar php
-$('#editar').click(function() {
-    window.location.href = "edit_project.html";
-});
-
-$('#create_project_btn').click(function() {
-    window.location.href = "your_projects.html";
-});
-
-$('#edit_project_btn').click(function() {
-    window.location.href = "your_projects.html";
-});
-
-
+};
 
 

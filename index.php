@@ -1,3 +1,26 @@
+<?php
+  include "dbConn.php"; 
+  session_start();
+  $tablename= "projects";
+  $sql = $sql = "SELECT *, COUNT(projects.id_project) AS DONORS, SUM(donations.donation) AS SUM  FROM `projects` INNER JOIN `donations` ON projects.id_project = donations.id_project GROUP BY projects.id_project";
+  $result = mysqli_query($connection, $sql);
+  $projects = [];
+
+  if (mysqli_num_rows($result) > 0) {
+    // output data of each row
+    while($row = mysqli_fetch_assoc($result)) {
+      $projects[] =  $row;
+    }
+    //echo $projects[0]['id_project'];
+  } else {
+    echo "0 results";
+  }
+
+  // 5. Close database connection
+  mysqli_close($connection);
+
+?>
+
 <!DOCTYPE html>
 <html lang="es">
 
@@ -13,256 +36,7 @@
 
 <body>
   <!-- Top container -->
-  <div class="container-fluid" id="top_bar">
-    <div class="top_bar">
-      <div style="margin-block: auto">
-        <h1>Project STEAM</h1>
-        <h2>Only the begining</h2>
-      </div>
-      <a class="logo"href="index.html"><img class="img-fluid logo " src="media/logo_multicolor.png" /></a>
-      <div id="top_buttons">
-        <button type="button" class="btn search_button" data-toggle="modal" data-target="#searchModal">
-          <img src="media/search.png" style="width: 24px" />
-        </button>
-        <!-- Button trigger modal -->
-        <button type="button" class="btn bgPurple signInButton" data-toggle="modal" data-target="#signInModal">
-          Iniciar sesión
-        </button>
-        <!-- Button trigger modal Sign up -->
-        <button type="button" class="btn signUpButton" style="display: none" data-toggle="modal"
-          data-target="#signUpModal">
-          Registrate
-        </button>
-        <div class="dropdown show">
-          <a class="btn dropdown-toggle profile_dropdown" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown"
-              aria-haspopup="true" aria-expanded="false">
-              <img class="img-fluid pr-1 profile_pic" src="media/profile_pic.png" style="width: 24px">
-              <span class="profile_name">Nombre</span>
-          </a>
-          <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuLink">
-              <a class="dropdown-item" href="your_projects.html">
-                  <img class="img-fluid mr-1 pb-1" src="media/your_projects.png" style="width:20px">
-                  Tus proyectos
-              </a>
-              <a class="dropdown-item" href="add_project.html">
-                  <img class="img-fluid mr-1 pb-1" src="media/add_project.png" style="width:20px">
-                  Publicar proyecto
-              </a>
-              <a class="dropdown-item" href="your_donations.html">
-                  <img class="img-fluid mr-1 pb-1" src="media/your_donations.png" style="width:20px">
-                  Tus donativos
-              </a>
-              <a class="dropdown-item" href="settings.html">
-                  <img class="img-fluid mr-1 pb-1" src="media/settings.png" style="width:20px">
-                  Configuración
-              </a>
-              <a class="dropdown-item log_out" href="index.html">
-                  <img class="img-fluid mr-1 pb-1" src="media/log_out.png" style="width:20px">
-                  Cerrar sesión
-              </a>
-          </div>
-      </div>
-      </div>
-    </div>
-  </div>
-  <!-- Modal to sign in-->
-  <div class="modal fade" id="signInModal" tabindex="-1" role="dialog" aria-labelledby="SignInModalLabel"
-    aria-hidden="true">
-    <div class="modal-dialog modal-lg" role="document">
-      <div class="modal-content">
-        <div class="modal-header" id="signInHeader">
-          <h5 class="modal-title">Inicia sesión en tu cuenta</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-          <div class="container">
-            <div class="row">
-              <!--Sign in content-->
-              <div class="col-sm" id="signInModalContent">
-                <div class="row">
-                  <div class="col-sm-6 col-sm-12">
-                    <button type="button" class="btn btn-light socialMediaButton" style="text-align: left">
-                      <span><img src="media/igoogle.png" id="socialMediaIcons" /></span>
-                      Inicia sesión con Google
-                    </button>
-                  </div>
-                </div>
-
-                <div class="row">
-                  <div class="col-sm-12">
-                    <button type="button" class="btn btn-light socialMediaButton">
-                      <span><img src="media/ifacebook.png" id="socialMediaIcons" /></span>
-                      Inicia sesión con Facebook
-                    </button>
-                  </div>
-                </div>
-
-                <div class="row">
-                  <div class="col-sm-12">
-                    <button type="button" class="btn btn-light socialMediaButton">
-                      <span><img src="media/iapple.png" id="socialMediaIcons" /></span>
-                      Inicia sesión con Apple
-                    </button>
-                  </div>
-                </div>
-
-                <div class="row">
-                  <div class="col-sm">
-                    <hr />
-                  </div>
-                  <div class="col-sm-1">o</div>
-                  <div class="col-sm">
-                    <hr />
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="col">
-                    <form>
-                      <div class="form-group">
-                        <label for="Email1">Correo electrónico</label>
-                        <input type="email" class="form-control" id="Email1" aria-describedby="emailHelp"
-                          placeholder="Enter email" />
-                        <small id="emailHelp" class="form-text text-muted">Nunca compartiremos tu correo con nadie
-                          más.</small>
-                      </div>
-                      <div class="form-group">
-                        <label for="Password1">Contraseña</label>
-                        <input type="password" class="form-control" id="Password1" placeholder="Password" />
-                      </div>
-                      <button type="button" class="btn bgPurple btn-lg btn-block" id="signInButtonInModal" style="margin-bottom: 5%">
-                        Iniciar sesión
-                      </button>
-                    </form>
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="col-sm-12">
-                    <p class="link" id="forgotPassButton">
-                      <small class="text-left">
-                        ¿Has olvidado tu contraseña?</small>
-                    </p>
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="col-sm-12">
-                    <small class="text-left">
-                      <span>¿Es tu primera vez en Project STEAM? </span>
-                      <button type="button" class="btn btn-light btn-sm signUpButton">
-                        Regístrate
-                      </button>
-                    </small>
-                  </div>
-                </div>
-              </div>
-              <!--Sign up form-->
-              <div class="col-sm" id="signUpModalContent">
-                <div class="row">
-                  <div class="col">
-                    <form>
-                      <div class="form-group">
-                        <label for="user">Nombre</label>
-                        <input type="text" class="form-control" id="user" aria-describedby="nameHelp"
-                          placeholder="John Doe" />
-                      </div>
-
-                      <div class="form-group">
-                        <label for="Email2">Correo electrónico</label>
-                        <input type="email" class="form-control" id="Email2" aria-describedby="emailHelp"
-                          placeholder="name@workemail.com" />
-                        <small id="emailHelp" class="form-text text-muted">Nunca compartiremos tu correo con nadie
-                          más.</small>
-                      </div>
-                      <div class="form-group">
-                        <label for="newPassword2">Contraseña</label>
-                        <input type="password" class="form-control" id="newPassword2" aria-describedby="passwordHelp"
-                          placeholder="Contraseña" />
-                        <small id="passwordHelp" class="form-text text-muted">Usa 8 o más caracteres y combina letras,
-                          números y
-                          símbolos..</small>
-                      </div>
-                      <button type="submit" class="btn bgPurple btn-lg btn-block" style="margin-bottom: 5%">
-                        Crear cuenta
-                      </button>
-                    </form>
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="col-sm-12">
-                    <p>
-                      <small class="text-left">
-                        Al continuar, estás aceptando los
-                        <span class="link">Términos y condiciones de uso</span>
-                        (se abre en una ventana nueva). Consulta nuestra
-                        <span class="link"> Política de privacidad</span> (se
-                        abre en una ventana nueva).</small>
-                    </p>
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="col-sm-12">
-                    <small class="text-left">
-                      <span>¿Ya te has registrado?</span>
-                      <button type="button" class="btn btn-light btn-sm signInButton">
-                        Inicia Sesión
-                      </button>
-                    </small>
-                  </div>
-                </div>
-              </div>
-              <!--Forgot password form-->
-              <div class="col-sm" id="forgotPassContent">
-                <div class="row">
-                  <div class="col">
-                    <p>
-                      <small class="text-left">
-                        No te preocupes. Te enviaremos un mensaje para
-                        ayudarte a restablecer tu contraseña.</small>
-                    </p>
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="col">
-                    <form>
-                      <div class="form-group">
-                        <label for="Email3">Correo electrónico</label>
-                        <input type="email" class="form-control" id="Email3" aria-describedby="emailHelp"
-                          placeholder="Enter email" />
-                      </div>
-                      <button type="submit" class="btn bgPurple btn-lg btn-block" style="margin-bottom: 5%">
-                        Continuar
-                      </button>
-                    </form>
-                  </div>
-                </div>
-              </div>
-
-              <div class="col-sm-6 d-none d-lg-block">
-                <img src="media/signInModal.jpeg" class="img-fluid" id="imgModal" alt="Project steam logo" />
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Modal to search-->
-  <div class = "modal fade" id="searchModal" tabindex="-1" role="dialog" aria-labelledby="SignInModalLabel"
-    aria-hidden="true">
-    <div class="modal-dialog modal-lg" role="document">
-      <div class="modal-content">
-        <div class="modal-header" id="signInHeader">
-          <img src="media/search.png" style="width: 26px; margin: auto auto 5px auto;">
-          <input class="search-bar shadow-none" type="text" placeholder="Buscar..">
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-      </div>
-    </div>
-  </div>
+  <?php include "top_bar.php"?>
 
   <div class="container-fluid content pt-3 pb-0">
     <div class="row d-flex justify-content-around nav text-center">
@@ -321,7 +95,7 @@
 
 
   <!-- Main content-->
-  <div class="container-fluid content">
+  <div class="container-fluid content pt-0">
     <!-- Mas populares-->
     <div class="row destacado_titulo">
       <div class="col-md-5 destacado_texto">
@@ -333,30 +107,26 @@
     </div>
     <div class="row destacado">
       <div class="col-md-5 columna_imagen">
-        <a href="proyectos.html">
-          <img class="img-fluid"
-            alt="https://www.kickstarter.com/projects/91367227/tether-projecting-safe-zones-around-bikes?ref=section-design-tech-featured-project"
-            src="media/p_tether.png" />
+        <a href=<?php echo "proyectos.php?project_id=".$projects[0]['id_project'];?>>
+          <img class="img-fluid" alt="imagen del proyecto" src="<?php echo $projects[0]['picture'];?>" />
         </a>
       </div>
       <div class="col-md-7 columna_texto">
-        <a href="proyectos.html">
-          <h3>tether - protegiendo zonas seguras alrededor de bicicletas</h3>
+        <a href=<?php echo "proyectos.php?project_id=".$projects[0]['id_project'];?>>
+          <h3><?php echo $projects[0]['title'];?></h3>
         </a>
-        <p>
-          Un dispositivo de seguridad para bicicletas que proyecta una zona
-          segura alrededor de su bicicleta, responde a los usuarios de la
-          carretera a su alrededor, identificando carreteras seguras e
-          inseguras en su ciudad.
-        </p>
+        <p> <?php echo $projects[0]['subtitle'];?> </p>
         <div>
           <img class="time_icon" src="media/time_icon_gray.png">
-          <p class="time_text">32 dias 8h</p>
+          <p class="time_text"> <?php $end = $projects[0]['end_date']; $time_left = strtotime($end) - strtotime(gmdate('Y-m-d H:i:s'));
+          $days = floor($time_left/ 86400); $hours = floor(($time_left - $days*86400)/ 3600);
+          echo $days. ' dias '. $hours . 'h';?> </p>
         </div>
         <div class="progress">
-          <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"
-            style="width: 70%">
-            70%
+          <?php $percentage = floor(($projects[0]['SUM'] * 100)/$projects[0]['moneyGoal'] ); ?>
+          <div class="progress-bar" role="progressbar" aria-valuenow="<?php echo $percentage?>" aria-valuemin="0" aria-valuemax="100"
+            style= "<?php echo 'width: '. $percentage . '%';?>"> 
+            <?php echo $percentage. "%"?>
           </div>
         </div>
       </div>
