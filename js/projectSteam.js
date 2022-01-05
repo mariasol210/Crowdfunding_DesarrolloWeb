@@ -38,6 +38,9 @@ $(document).ready(function() {
         $('#signIn').click();
         $(".signUpButton").click();
     }
+
+    document.querySelector("#name").disabled=true;
+    document.querySelector("#email").disabled=true;
 });
 
 function getURL() {

@@ -40,9 +40,11 @@
 
     <!-- Projects-->
     <div class="container-fluid content pt-0" style="min-height: 30rem;">
-        
-    <?php 
-                   
+        <div class="container donations_elements">
+            <?php 
+            if (count($projects) == 0){
+                echo "<div class='alert alert-primary' id='emptyDonations' role='alert'> Aún no tienes proyectos. ¡Empieza a recaudar! </div>";
+            }       
             for ($i=0; $i<count($projects); $i++) {
                 $end = $projects[$i]['end_date'];
                 $time_left = strtotime($end) - strtotime(gmdate('Y-m-d H:i:s'));
@@ -104,10 +106,11 @@
             </div>
             </div>
             </div>
-            </div>
             ';
             }
         ?>
+        </div>
+    </div>
 
 
     <!-- Modal to share-->

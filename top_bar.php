@@ -12,13 +12,14 @@ if (isset($_POST['sign_in'])) {
 
   if (mysqli_num_rows($result) > 0) {
     while($row = mysqli_fetch_assoc($result)) {
-      if(password_verify($pass, $row['password'])){
+      if(password_verify($pass, $row['password']) && $row['active']==1){
         $_SESSION['user_id'] = $row['id_user'];
         $_SESSION['email'] = $row['email'];
         $_SESSION['name'] = $row['name'];
         $_SESSION['profile_pic'] = $row['profile_pic'];
         unset($_POST['sign_in']);
       }
+      else if ($row['active']!=1){$error_signin = "<div class='alert alert-danger' id='errorSignIn' role='alert'> Correo electrónico o contraseña incorrecta. Intentelo de nuevo </div>";}
       
     }
   } else {

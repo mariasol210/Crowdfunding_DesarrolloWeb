@@ -46,7 +46,9 @@
     <div class="container donations_elements">
 
         <?php 
-                   
+            if (count($donations) == 0){
+                echo "<div class='alert alert-primary' id='emptyDonations' role='alert'> No has donado todavía. ¡Anímate! </div>";
+            }       
             for ($i=0; $i<count($donations); $i++) {                 
             echo 
             '<div class="row element">
