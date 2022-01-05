@@ -4,6 +4,14 @@
   $tablename= "projects";
   $project_id = $_GET['project_id'];
 
+  if (isset($_POST['h_para_ti'])) { header("Location: ./filtrado.php?selected_category=para_ti");}
+  if (isset($_POST['h_ciencia'])) { header("Location: ./filtrado.php?selected_category=science");}
+  if (isset($_POST['h_tecnologia'])) { header("Location: ./filtrado.php?selected_category=tech"); }
+  if (isset($_POST['h_ingenieria'])) { header("Location: ./filtrado.php?selected_category=eng"); }
+  if (isset($_POST['h_arte'])) { header("Location: ./filtrado.php?selected_category=art"); }
+  if (isset($_POST['h_matematicas'])) { header("Location: ./filtrado.php?selected_category=math"); }
+
+
   $sql = "SELECT projects.*, users.*, COUNT(projects.id_project) AS DONORS, SUM(donations.donation) AS SUM FROM `projects` LEFT JOIN `donations` ON projects.id_project = donations.id_project LEFT JOIN users ON projects.organizer_id = users.id_user WHERE projects.id_project = ". $project_id;
   $result = mysqli_query($connection, $sql);
   $meses = array("Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre");
@@ -37,7 +45,7 @@
   }
 
   //carrousel projects
-  $sql = "SELECT projects.*, users.*, COUNT(projects.id_project) AS DONORS, SUM(donations.donation) AS SUM FROM `projects` LEFT JOIN `donations` ON projects.id_project = donations.id_project LEFT JOIN users ON projects.organizer_id = users.id_user WHERE NOT projects.id_project = ".$project_id. " GROUP BY projects.id_project ORDER BY start_date DESC LIMIT 8";
+  $sql = "SELECT projects.*, users.*, COUNT(projects.id_project) AS DONORS, SUM(donations.donation) AS SUM FROM `projects` LEFT JOIN `donations` ON projects.id_project = donations.id_project LEFT JOIN users ON projects.organizer_id = users.id_user WHERE NOT projects.id_project = ".$project_id. " AND `users`.active = 1 GROUP BY projects.id_project ORDER BY start_date DESC LIMIT 8";
   $result = mysqli_query($connection, $sql);
   $projects = [];
 
@@ -48,7 +56,7 @@
   }
 
   //donations data
-  $sql = "SELECT * FROM `donations` INNER JOIN users ON donations.id_user = users.id_user WHERE donations.id_project=". $project_id. " ORDER BY date DESC LIMIT 3";
+  $sql = "SELECT * FROM `donations` INNER JOIN users ON donations.id_user = users.id_user WHERE donations.id_project=". $project_id. " AND `users`.active = 1 ORDER BY date DESC LIMIT 3";
   $result = mysqli_query($connection, $sql);
   $donations = [];
   
@@ -128,11 +136,11 @@
             <div class="col"> 
               <div class="row">
                 <?php 
-                if($science == 1) {echo '<img class="sponsor1_pic"src="media/itag.png" style="width: 1.7rem; margin-left: 5%;"> <a class="link" id="tag" href="#"> Science </a>';}
-                if($tech == 1) {echo '<img class="sponsor1_pic"src="media/itag.png" style="width: 1.7rem; margin-left: 5%;"> <a class="link" id="tag" href="#"> Technology </a>';}
-                if($eng== 1) {echo '<img class="sponsor1_pic"src="media/itag.png" style="width: 1.7rem; margin-left: 5%;"> <a class="link" id="tag" href="#"> Engineering </a>';}
-                if($art == 1) {echo '<img class="sponsor1_pic"src="media/itag.png" style="width: 1.7rem; margin-left: 5%;"> <a class="link" id="tag" href="#"> Arts </a>';}
-                if($math == 1) {echo '<img class="sponsor1_pic"src="media/itag.png" style="width: 1.7rem; margin-left: 5%;"> <a class="link" id="tag" href="#"> Mathematics </a>';}
+                if($science == 1) {echo '<img class="sponsor1_pic"src="media/itag.png" style="width: 1.7rem; margin-left: 5%;"> <a class="link" id="tag" href="./filtrado.php?selected_category=science"> Science </a>';}
+                if($tech == 1) {echo '<img class="sponsor1_pic"src="media/itag.png" style="width: 1.7rem; margin-left: 5%;"> <a class="link" id="tag" href="./filtrado.php?selected_category=tech"> Technology </a>';}
+                if($eng== 1) {echo '<img class="sponsor1_pic"src="media/itag.png" style="width: 1.7rem; margin-left: 5%;"> <a class="link" id="tag" href="./filtrado.php?selected_category=eng"> Engineering </a>';}
+                if($art == 1) {echo '<img class="sponsor1_pic"src="media/itag.png" style="width: 1.7rem; margin-left: 5%;"> <a class="link" id="tag" href="./filtrado.php?selected_category=art"> Arts </a>';}
+                if($math == 1) {echo '<img class="sponsor1_pic"src="media/itag.png" style="width: 1.7rem; margin-left: 5%;"> <a class="link" id="tag" href="./filtrado.php?selected_category=math"> Mathematics </a>';}
                 ?>
               </div>
             </div>
@@ -290,28 +298,46 @@
   <div class="container-fluid container  d-none d-md-block">
     <div class="nav_buttons text-center">
       <div>
-        <input type="image" name="para_ti" src="media/para_ti-color.png" alt="para_ti" />
-        <p>Para ti</p>
-      </div>
-      <div>
-        <input type="image" name="ciencia" src="media/ciencia-color.png" alt="ciencia" />
-        <p>Ciencia</p>
-      </div>
-      <div>
-        <input type="image" name="tech" src="media/tecnologia-color.png" alt="tecnologia" />
-        <p>Tecnología</p>
-      </div>
-      <div>
-        <input type="image" name="ingenieria" src="media/ingenieria-color.png" alt="ingenieria" />
-        <p>Ingeniería</p>
-      </div>
-      <div>
-        <input type="image" name="arte" src="media/arte-color.png" alt="arte" />
-        <p>Arte</p>
-      </div>
-      <div>
-        <input type="image" name="mates" src="media/mates-color.png" alt="matematicas" />
-        <p>Matemáticas</p>
+      <form action="#" method="POST">
+          <input type="image" name="para_ti" src="media/para_ti-color.png" alt="para_ti" />
+          <input type="hidden" name="h_para_ti">
+          <p>Para ti</p>
+        </form>
+        </div>
+        <div>
+        <form action="#" method="POST">
+          <input type="image" name="ciencia" src="media/ciencia-color.png" alt="ciencia" />
+          <input type="hidden" name="h_ciencia">
+          <p>Ciencia</p>
+          </form>
+        </div>
+        <div>
+        <form action="#" method="POST">
+          <input type="image" name="tech" src="media/tecnologia-color.png" alt="tecnologia" />
+          <input type="hidden" name="h_tecnologia">
+          <p>Tecnología</p>
+          </form>
+        </div>
+        <div>
+        <form action="#" method="POST">
+          <input type="image" name="ingenieria" src="media/ingenieria-color.png" alt="ingenieria" />
+          <input type="hidden" name="h_ingenieria">
+          <p>Ingeniería</p>
+          </form>
+        </div>
+        <div>
+        <form action="#" method="POST">
+          <input type="image" name="arte" src="media/arte-color.png" alt="arte" />
+          <input type="hidden" name="h_arte">
+          <p>Arte</p>
+          </form>
+        </div>
+        <div>
+        <form action="#" method="POST">
+          <input type="image" name="mates" src="media/mates-color.png" alt="matematicas" />
+          <input type="hidden" name="h_matematicas">
+          <p>Matemáticas</p>
+          </form>
       </div>
     </div>
   </div>

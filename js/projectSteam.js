@@ -38,9 +38,6 @@ $(document).ready(function() {
         $('#signIn').click();
         $(".signUpButton").click();
     }
-
-    document.querySelector("#name").disabled=true;
-    document.querySelector("#email").disabled=true;
 });
 
 function getURL() {
@@ -72,15 +69,9 @@ $('.search-bar').on('keydown', function(evt) {
     }
 } );
 
-$('.btn_ver_mas').click(function(evt) {
-    // Get category
-    $categoria = "para ti";
-    search($categoria);
-} ); 
-
 function search(val){
     //TODO search in db
     console.log(val);
-    window.location.href = "filtrado.php";
+    window.location.href = "./filtrado.php?q="+val;
 };
 

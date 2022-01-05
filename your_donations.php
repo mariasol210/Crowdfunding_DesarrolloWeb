@@ -3,7 +3,7 @@
   session_start();
   $tablename= "projects";
 
-  $sql = "SELECT * FROM `donations` INNER JOIN users ON donations.id_user = users.id_user INNER JOIN projects ON donations.id_project = projects.id_project WHERE users.id_user=". $_SESSION['user_id']. " ORDER BY date ASC";
+  $sql = "SELECT * FROM `donations` INNER JOIN users ON donations.id_user = users.id_user INNER JOIN projects ON donations.id_project = projects.id_project WHERE users.id_user=". $_SESSION['user_id']. " AND `users`.active = 1 ORDER BY date ASC";
   $result = mysqli_query($connection, $sql);
   $donations = [];
   

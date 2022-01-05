@@ -3,9 +3,9 @@
   session_start();
   $tablename= "projects";
 
-  $categories = array("for_you", "science", "tech", "eng", "art", "math"); //array to not deal with strings
+  $categories = array("para_ti", "science", "tech", "eng", "art", "math"); //array to not deal with strings
   $selected_category = $categories[0]; //default selected category is "para ti"
-
+  
   if (isset($_POST['h_para_ti'])) { $selected_category = $categories[0];}
   if (isset($_POST['h_ciencia'])) { $selected_category = $categories[1];}
   if (isset($_POST['h_tecnologia'])) { $selected_category = $categories[2]; }
@@ -16,11 +16,11 @@
   $sql = "SELECT projects.*, users.*, COUNT(projects.id_project) AS DONORS, SUM(donations.donation) AS SUM FROM `projects` LEFT JOIN `donations` ON projects.id_project = donations.id_project LEFT JOIN users ON projects.organizer_id = users.id_user";
   //in case selected category is "para_ti", just show projects in whatever order
   if ($selected_category == $categories[0]){
-    $sql = $sql. " GROUP BY projects.id_project";
+    $sql = $sql. " WHERE `users`.active = 1 GROUP BY projects.id_project";
   }
   //if selected category is one of the above, search in ddbb 
   else{
-    $sql = $sql. " WHERE ". $selected_category . " = 1 GROUP BY projects.id_project";
+    $sql = $sql. " WHERE ". $selected_category . " = 1 AND `users`.active = 1 GROUP BY projects.id_project";
   }
   $result = mysqli_query($connection, $sql);
   $projects = [];
@@ -140,7 +140,7 @@
         <h1>Más populares</h1>
       </div>
       <div class="col-md-2 destacado_boton">
-        <button type="button" class="btn bgPurple btn_ver_mas">Ver más</button>
+        <button type="button" class="btn bgPurple btn_ver_mas" onclick=<?php echo "location.href='filtrado.php?selected_category=".$selected_category."'";?>>Ver más</button>
       </div>
     </div>
     <div class="row destacado">
