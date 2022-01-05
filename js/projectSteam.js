@@ -38,7 +38,6 @@ $(document).ready(function() {
         $('#signIn').click();
         $(".signUpButton").click();
     }
-
 });
 
 function getURL() {
@@ -79,7 +78,6 @@ $('.btn_ver_mas').click(function(evt) {
 function search(val){
     //TODO search in db
     console.log(val);
-    window.location.href = "filtrado.html";
+    window.location.href = "filtrado.php";
 };
-
 

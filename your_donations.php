@@ -1,3 +1,27 @@
+<?php
+  include "dbConn.php";   
+  session_start();
+  $tablename= "projects";
+
+  $sql = "SELECT * FROM `donations` INNER JOIN users ON donations.id_user = users.id_user INNER JOIN projects ON donations.id_project = projects.id_project WHERE users.id_user=". $_SESSION['user_id']. " ORDER BY date ASC";
+  $result = mysqli_query($connection, $sql);
+  $donations = [];
+  
+  if (mysqli_num_rows($result) > 0) {
+    // output data of each row
+    while($row = mysqli_fetch_assoc($result)) {
+      $donations[] =  $row;
+    }
+  } else {
+    $project_donations='0';
+  }
+
+  // 5. Close database connection
+  mysqli_close($connection);
+  
+    
+?>
+
 <!DOCTYPE html>
 <html lang="es">
 
@@ -20,46 +44,28 @@
         <h1>Tu historial de donaciones</h1>
     </div>
     <div class="container donations_elements">
-        <div class="row element">
+
+        <?php 
+                   
+            for ($i=0; $i<count($donations); $i++) {                 
+            echo 
+            '<div class="row element">
             <div class="col-md-2 element_col">
-                <h1>20€</h1>
+            <h1>'. $donations[$i]['donation'].'€</h1>
             </div>
             <div class="col-md-7 element_col">
-                <h2><a href="#">Cortometraje "¿Y si pudieses elegir?"</a></h2>
+            <h2><a href="proyectos.php?project_id='.$donations[$i]['id_project'].'">'.$donations[$i]['title'].'</a></h2>
             </div>
             <div class="col-md-3 element_col">
-                <h2>25/11/21</h2>
-            </div> 
-        </div>
-        <div class="row element">
-            <div class="col-md-2 element_col">
-                <h1>10€</h1>
+            <h2>'.$donations[$i]['date'].'</h2>
             </div>
-            <div class="col-md-7 element_col">
-                <h2><a href="#">SciLynk: Una nueva era para la ciencia</a></h2>
             </div>
-            <div class="col-md-3 element_col">
-                <h2>17/10/21</h2>
-            </div> 
-        </div>
-        <div class="row element">
-            <div class="col-md-2 element_col">
-                <h1>35€</h1>
-            </div>
-            <div class="col-md-7 element_col">
-                <h2><a href="proyectos.html">tether - protegiendo zonas seguras alrededor de bicicletas</a></h2>
-            </div>
-            <div class="col-md-3 element_col">
-                <h2>01/10/21</h2>
-            </div> 
-        </div>
+            ';
+            }
+        ?>
+    
     </div>
 
-
-
-
-
-    
     <!-- Footer-->
     <footer class="row footer_container">
         <div class="col-md-3 footer_columna">

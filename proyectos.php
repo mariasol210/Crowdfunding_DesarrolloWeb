@@ -4,17 +4,15 @@
   $tablename= "projects";
   $project_id = $_GET['project_id'];
 
-  $sql = "SELECT projects.*, users.*, COUNT(projects.id_project) AS DONORS, SUM(donations.donation) AS SUM FROM `projects` LEFT JOIN `donations` ON projects.id_project = donations.id_project LEFT JOIN users ON projects.organizer_id = users.id_user GROUP BY projects.id_project ORDER BY start_date DESC LIMIT 8";
+  $sql = "SELECT projects.*, users.*, COUNT(projects.id_project) AS DONORS, SUM(donations.donation) AS SUM FROM `projects` LEFT JOIN `donations` ON projects.id_project = donations.id_project LEFT JOIN users ON projects.organizer_id = users.id_user WHERE projects.id_project = ". $project_id;
   $result = mysqli_query($connection, $sql);
-  $projects = [];
   $meses = array("Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre");
 
   if (mysqli_num_rows($result) > 0) {
-    // output data of each row
+    // output data of project
     while($row = mysqli_fetch_assoc($result)) {
       //recover the info of the project that was clicked
-      if($row['id_project'] == $project_id) {
-        
+      if ($row['SUM']==null){ $row['SUM']=0; $row['DONORS'] = 0;}     
         $project_title = htmlspecialchars_decode($row['title'], ENT_QUOTES);
         $money_goal = $row['moneyGoal'];
         $project_donations = $row['SUM'];
@@ -31,15 +29,24 @@
         $eng = $row['eng'];
         $art = $row['art'];
         $math = $row['math'];
-      } else{
-        //Store the rest of the projects for the carrousel
-        $projects[] =  $row;
-      }
+
     }
   } else {
     echo "0 results";
   }
 
+  //carrousel projects
+  $sql = "SELECT projects.*, users.*, COUNT(projects.id_project) AS DONORS, SUM(donations.donation) AS SUM FROM `projects` LEFT JOIN `donations` ON projects.id_project = donations.id_project LEFT JOIN users ON projects.organizer_id = users.id_user WHERE NOT projects.id_project = ".$project_id. " GROUP BY projects.id_project ORDER BY start_date DESC LIMIT 8";
+  $result = mysqli_query($connection, $sql);
+  $projects = [];
+
+  if (mysqli_num_rows($result) > 0) {
+    while($row = mysqli_fetch_assoc($result)) {
+      $projects[] = $row;
+    }
+  }
+
+  //donations data
   $sql = "SELECT * FROM `donations` INNER JOIN users ON donations.id_user = users.id_user WHERE donations.id_project=". $project_id. " ORDER BY date DESC LIMIT 3";
   $result = mysqli_query($connection, $sql);
   $donations = [];

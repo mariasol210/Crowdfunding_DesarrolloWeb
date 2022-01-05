@@ -1,5 +1,20 @@
 <?php
-session_start();
+    include "dbConn.php";
+    session_start();
+
+    $sql = "SELECT projects.*, COUNT(projects.id_project) AS DONORS, SUM(donations.donation) AS SUM FROM `projects` LEFT JOIN `donations` ON projects.id_project = donations.id_project WHERE projects.organizer_id = ".$_SESSION['user_id']." GROUP BY projects.id_project ORDER BY start_date ASC";
+    $result = mysqli_query($connection, $sql);
+    $projects = [];
+
+    if (mysqli_num_rows($result) > 0) {
+        // output data of each row
+        while($row = mysqli_fetch_assoc($result)) {
+          $projects[] =  $row;
+        }
+    }
+
+    // 5. Close database connection
+    mysqli_close($connection);
 ?>
 
 <!DOCTYPE html>
@@ -25,122 +40,75 @@ session_start();
 
     <!-- Projects-->
     <div class="container-fluid content pt-0" style="min-height: 30rem;">
-        <div class="row destacado mt-5 mb-5">
-            <!-- Image-->
+        
+    <?php 
+                   
+            for ($i=0; $i<count($projects); $i++) {
+                $end = $projects[$i]['end_date'];
+                $time_left = strtotime($end) - strtotime(gmdate('Y-m-d H:i:s'));
+                $days = floor($time_left/ 86400);
+                $hours = floor(($time_left - $days*86400)/ 3600);
+                $percentage = floor(($projects[$i]['SUM'] * 100)/$projects[$i]['moneyGoal'] );
+                if ($projects[$i]['SUM']==null){ $projects[$i]['SUM']=0; $projects[$i]['DONORS'] = 0;}             
+            echo 
+            '<div class="row destacado mt-5 mb-5">
             <div class="col-md-3 columna_imagen">
-                <a href="proyectos.html">
-                    <img class="img-fluid"
-                        alt="https://www.kickstarter.com/projects/91367227/tether-projecting-safe-zones-around-bikes?ref=section-design-tech-featured-project"
-                        src="media/p_tether.png" />
-                </a>
+            <a href="proyectos.php?project_id='.$projects[$i]['id_project'].'">
+            <img class="img-fluid" alt="https://www.kickstarter.com/projects/91367227/tether-projecting-safe-zones-around-bikes?ref=section-design-tech-featured-project"
+            src="'.$projects[$i]['picture'].'" />
+            </a>
             </div>
-            <!-- Description-->
             <div class="col-md-5 columna_texto">
-                <a href="proyectos.html">
-                    <h3>tether - protegiendo zonas seguras alrededor de bicicletas</h3>
-                </a>
-                <div>
-                    <img class="time_icon" src="media/time_icon_gray.png">
-                    <p class="time_text">32 dias 8h</p>
-                </div>
-                <div class="progress">
-                    <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0"
-                        aria-valuemax="100" style="width: 70%">
-                        70%
-                    </div>
-                </div>
+            <a href="proyectos.php?project_id='.$projects[$i]['id_project'].'">
+            <h3>'.$projects[$i]['title'].'</h3>
+            </a>
+            <div>
+            <img class="time_icon" src="media/time_icon_gray.png">
+            <p class="time_text">'.$days. ' dias '. $hours . 'h</p>
             </div>
-            <!-- Information and managing-->
-            <div class="col-md-4 vertical_line">
-                <div class="mng_project">
-                    <div class="text-center">
-                        <!-- put the on the onclik <?php //echo 'location.href=\'edit_project.php?project_id='.$project[0]['id_project'].'\';';?> -->
-                        <button class="btn" type = "button" id="editar" name = "editar" onclick="location.href='edit_project.php?project_id=8'">
-                            <img class="mng_project_icons" src="media/editar.png" />
-                            <p>Editar</p> 
-                        </button>
-                    </div>
-                    <div class="text-center">
-                        <button class="btn" type = "button" name = "compartir" onclick="getURL()" data-toggle="modal" data-target="#shareModal">
-                            <img class="mng_project_icons" src="media/compartir.png" />
-                            <p>Compartir</p>
-                        </button>                        
-                    </div>
-                    <div class="text-center">
-                        <button class="btn" type = "button" name = "retirar">
-                            <img class="mng_project_icons" src="media/retirar.png" />
-                            <p>Retirar</p>
-                        </button>
-                    </div>
-                </div>
-                <div class="info_project">
-                    <div class="row">
-                        <h3><span class="project_money">2380€</span></h3>
-                        <p>&nbsp;recaudados de <span class="project_objective">3400</span>€</p>
-                    </div>
-                    <div class="row">
-                        <h3 class="project_sponsors">285</h3>
-                        <p>&nbsp;patrocinadores</p>
-                    </div>
-                </div>
+            <div class="progress">
+            <div class="progress-bar" role="progressbar" aria-valuenow="'. $percentage.'" aria-valuemin="0" aria-valuemax="100"
+            style= "width: '. $percentage . '%" >'.$percentage. '%
             </div>
-        </div>
-        <div class="row destacado mt-5 mb-5">
-            <div class="col-md-3 columna_imagen">
-                <a href="#">
-                  <img class="img-fluid"
-                    alt="https://www.kickstarter.com/projects/ufactory/ufactory-lite-6-most-affordable-collaborative-robot-arm?ref=section-homepage-featured-project"
-                    src="media/p_ufactory.png">
-                </a>
-              </div>
-              <div class="col-md-5 columna_texto">
-                <a href="#">
-                  <h3>UFACTORY Lite 6 – El brazo robotico colaborativo más asequible</h3>
-                </a>
-                <div>
-                    <img class="time_icon" src="media/time_icon_gray.png">
-                    <p class="time_text">14 dias 7h</p>
-                </div>
-                <div class="progress">
-                  <div class="progress-bar" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%">
-                    20%
-                  </div>
-                </div>
+            </div>
             </div>
             <div class="col-md-4 vertical_line">
-                <div class="mng_project">
-                    <div class="text-center">
-                        <button class="btn" type = "button" name = "editar">
-                            <img class="mng_project_icons" src="media/editar.png" />
-                            <p>Editar</p> 
-                        </button>
-                    </div>
-                    <div class="text-center">
-                        <button class="btn" type = "button" name = "compartir" onclick="getURL()" data-toggle="modal" data-target="#shareModal">
-                            <img class="mng_project_icons" src="media/compartir.png" />
-                            <p>Compartir</p>
-                        </button>                        
-                    </div>
-                    <div class="text-center">
-                        <button class="btn" type = "button" name = "retirar">
-                            <img class="mng_project_icons" src="media/retirar.png" />
-                            <p>Retirar</p>
-                        </button>
-                    </div>
-                </div>
-                <div class="info_project">
-                    <div class="row">
-                        <h3><span class="project_money">974€</span></h3>
-                        <p>&nbsp;recaudados de <span class="project_objective">4870</span>€</p>
-                    </div>
-                    <div class="row">
-                        <h3 class="project_sponsors">101</h3>
-                        <p>&nbsp;patrocinadores</p>
-                    </div>
-                </div>
+            <div class="mng_project">
+            <div class="text-center">
+            <button class="btn" type = "button" id="editar" name = "editar" onclick="location.href=\'edit_project.php?project_id='.$projects[$i]['id_project'].'\'">
+            <img class="mng_project_icons" src="media/editar.png" />
+            <p>Editar</p>
+            </button>
             </div>
-        </div>
-    </div>
+            <div class="text-center">
+            <button class="btn" type = "button" name = "compartir" onclick="getURL()" data-toggle="modal" data-target="#shareModal">
+            <img class="mng_project_icons" src="media/compartir.png" />
+            <p>Compartir</p>
+            </button>                        
+            </div>
+            <div class="text-center">
+            <button class="btn" type = "button" name = "retirar" data-toggle="modal" data-target="#withdrawModal">
+            <img class="mng_project_icons" src="media/retirar.png" />
+            <p>Retirar</p>
+            </button>
+            </div>
+            </div>
+            <div class="info_project">
+            <div class="row">
+            <h3><span class="project_money">'.$projects[$i]['SUM'].'€</span></h3>
+            <p>&nbsp;recaudados de <span class="project_objective">'.$projects[$i]['moneyGoal'].'</span>€</p>
+            </div>
+            <div class="row">
+            <h3 class="project_sponsors">'.$projects[$i]['DONORS'].'</h3>
+            <p>&nbsp;patrocinadores</p>
+            </div>
+            </div>
+            </div>
+            </div>
+            ';
+            }
+        ?>
+
 
     <!-- Modal to share-->
   <div class="modal fade" id="shareModal" role="dialog">
@@ -202,6 +170,50 @@ session_start();
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+
+     <!-- Modal to withdraw-->
+     <div class="modal fade" id="withdrawModal" role="dialog">
+    <div class="modal-dialog ">
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Retira tus donativos</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="container">
+
+            <div class="row">
+              <div class="col">
+                <p> Introduce tu información bancaria</p>
+              </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <form action="">
+                    <div class="inputbox"> 
+                        <input type="text" name="cardholder" class="form-control" required="required"> <span>Nombre del titular</span> </div>
+                    <div class="inputbox"> 
+                        <input type="tel" inputmode="numeric" name="cc_number" pattern="[0-9\s]{13,19}" autocomplete="cc-number"  max="19" class="form-control" required="required" maxlength="19"> 
+                        <span>Número de tarjeta</span> <i class="fa fa-eye"></i> <p class="small"> Ej. xxxx xxxx xxxx xxxx </p>
+                    </div>
+                    <div class="col-md-12 text-center">
+                        <input class = "btn bgPurple" type="submit" value="Retirar" style="margin-left:auto; margin-right:auto">
+                    </div>
+                    </form>
+                </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
         </div>
       </div>
       

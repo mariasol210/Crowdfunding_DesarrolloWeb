@@ -14,6 +14,7 @@ if (isset($_POST['sign_in'])) {
     while($row = mysqli_fetch_assoc($result)) {
       if(password_verify($pass, $row['password'])){
         $_SESSION['user_id'] = $row['id_user'];
+        $_SESSION['email'] = $row['email'];
         $_SESSION['name'] = $row['name'];
         $_SESSION['profile_pic'] = $row['profile_pic'];
         unset($_POST['sign_in']);

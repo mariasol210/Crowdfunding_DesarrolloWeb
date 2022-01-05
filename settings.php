@@ -1,3 +1,11 @@
+<?php
+    include "dbConn.php";   
+    session_start();
+
+    // 5. Close database connection
+    mysqli_close($connection);
+?>
+
 <!DOCTYPE html>
 <html lang="es">
 
@@ -30,7 +38,9 @@
         <div class="row">
             <div class="text-center">
                 <div class="profile_pic_container">
-                    <img class="profile_pic" src="media/profile_pic.png">
+                    <?php if ($_SESSION['profile_pic'] == '') {$pp = 'media/profile_pic.png';}
+                    else {$pp = $_SESSION['profile_pic'];}?>
+                    <img class="profile_pic" src="<?php echo $pp?>">
                 </div>
             </div>
             <div>
@@ -51,7 +61,7 @@
         </div>
         <div class="row">
             <div class="col-md-4">
-                <input type="text" class="form-control" id="name">
+                <input type="text" class="form-control" id="name" value ="<?php echo $_SESSION['name'];?>">
             </div>
             <div>
                 <button type="submit" class="btn bgPurple text-center boton_nombre" onclick="change_name()">
@@ -67,7 +77,7 @@
         </div>
         <div class="row">
             <div class="col-md-4">
-                <input type="text" class="form-control" id="email">
+                <input type="text" class="form-control" id="email" value ="<?php echo $_SESSION['email'];?>">
             </div>
             <div>
                 <button type="submit" class="btn bgPurple text-center boton_email" onclick="change_mail()">
