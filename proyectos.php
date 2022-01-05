@@ -21,6 +21,7 @@
         $start_date = $row['start_date'];
         $end_date = $row['end_date'];
         $organizer = $row['name'];
+        $organizer_email = $row['email'];
         $organizer_pic = $row['profile_pic'];
         $project_sub = htmlspecialchars_decode($row['subtitle'], ENT_QUOTES);
         $project_info = htmlspecialchars_decode($row['description'], ENT_QUOTES);
@@ -254,7 +255,7 @@
                     //only if we have more than 4 projects we display another page
                     if(count($projects)>4){
                       echo '<div class="carousel-item"><div class="row">';
-                      for ($i=0; $i<count($projects) && $i<4; $i++) {
+                      for ($i=4; $i<count($projects) && $i<8; $i++) {
                         if($projects[$i]['SUM'] == ''){$projects[$i]['SUM']='0';}
                         $percentage = floor(($projects[$i]['SUM'] * 100)/$projects[$i]['moneyGoal'] ); 
                         
@@ -396,8 +397,8 @@
             <div class="container">
               <div class="row">
                 <div class="col" style="text-align: center;" >
-                <span><img class="autor_pic"src="<?php echo $project[0]['profile_pic']?>" style="width:18%;"> </span>
-                  <h3 class="autor"> <b> <?php echo $project[0]['name']?> </b></h3>
+                <span><img class="autor_pic"src="<?php echo $organizer_pic?>" style="width:18%;"> </span>
+                  <h3 class="autor"> <b> <?php echo $organizer?> </b></h3>
                   <p class="autor_ubicacion"> Madrid</p>
                 </div>
               </div>
@@ -409,7 +410,7 @@
               <div class="row">
                 <div class="col" style="text-align: center;">
                   <span><img src="media/iemail.jpg" style="width: 4%;"></span>
-                  <span class="autor_email"> <a href="#" class="link"><?php echo $project[0]['email']?></a></span>
+                  <span class="autor_email"> <a href="#" class="link"><?php echo $organizer_email?></a></span>
                 </div>
               </div>
 
