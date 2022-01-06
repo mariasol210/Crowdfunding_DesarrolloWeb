@@ -51,6 +51,11 @@
         echo "0 results";
     }
 
+    $total_projects = count($projects);
+    $total_pages = ceil($total_projects/9); //check how many pages will be needed (9 projects per page)
+
+    $page = isset($_GET['page']) && is_numeric($_GET['page']) ? $_GET['page']:1; //check if page is passed through the url, if not set it to 1
+
     // 5. Close database connection
     mysqli_close($connection);
 ?>
@@ -79,7 +84,8 @@
         </div>
 
         <?php 
-            $i = 0; //project index
+
+            $i = ($page-1)*9; //project index
             for ($j=0; $j<3; $j++){ //row counter
                 echo '<div class="row">';
                 
@@ -106,19 +112,24 @@
 
 
     <!-- Bottom navigation-->
-    <nav aria-label="page_navigation">
+    
+    <nav aria-label="page_navigation" style=<?php if($total_pages==1) echo "display:none;";?>>
         <ul class="pagination justify-content-center mt-4">
-            <li class="page-item disabled">
-                <a class="page-link" href="#" tabindex="-1" aria-label="Previous">
+            <li class=<?php if($page>1) echo '"page-item"'; else echo '"page-item disabled"';?>>
+                <a class="page-link" href=<?php echo '"./filtrado.php?selected_category='.$selected_category.'&page='.($page-1).'"'?> tabindex="-1" aria-label="Previous">
                     <span aria-hidden="true">&laquo;</span>
                     <span class="sr-only">Previous</span>
                 </a>
             </li>
-            <li class="page-item"><a class="page-link" href="#">1</a></li>
-            <li class="page-item"><a class="page-link" href="#">2</a></li>
-            <li class="page-item"><a class="page-link" href="#">3</a></li>
-            <li class="page-item">
-                <a class="page-link" href="#" aria-label="Next">
+            <?php 
+                for ($i = 1; $i<=$total_pages; $i++){
+                    $style = "";
+                    if ($page==$i) $style = "background-color: powderblue"; 
+                    echo '<li class="page-item"><a class="page-link" style="'.$style.'" href="./filtrado.php?selected_category='.$selected_category.'&page='.$i.'">'.$i.'</a></li>';
+                } 
+            ?>
+            <li class=<?php if($page<$total_pages) echo '"page-item"'; else echo '"page-item disabled"';?>>
+                <a class="page-link" href=<?php echo '"./filtrado.php?selected_category='.$selected_category.'&page='.($page+1).'"'?> aria-label="Next">
                     <span aria-hidden="true">&raquo;</span>
                     <span class="sr-only">Next</span>
                 </a>
