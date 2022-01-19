@@ -47,8 +47,6 @@
             $projects[] =  $row;
         }
         //echo $projects[0]['id_project'];
-    }     else {
-        echo "0 results";
     }
 
     $total_projects = count($projects);

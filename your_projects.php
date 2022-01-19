@@ -2,7 +2,7 @@
     include "dbConn.php";
     session_start();
 
-    $sql = "SELECT projects.*, COUNT(projects.id_project) AS DONORS, SUM(donations.donation) AS SUM FROM `projects` LEFT JOIN `donations` ON projects.id_project = donations.id_project WHERE projects.organizer_id = ".$_SESSION['user_id']. " AND `users`.active = 1 GROUP BY projects.id_project ORDER BY start_date ASC";
+    $sql = "SELECT projects.*, COUNT(projects.id_project) AS DONORS, SUM(donations.donation) AS SUM FROM `projects` INNER JOIN users ON projects.organizer_id = users.id_user LEFT JOIN `donations` ON projects.id_project = donations.id_project WHERE projects.organizer_id = ".$_SESSION['user_id']. " AND `users`.active = 1 GROUP BY projects.id_project ORDER BY start_date ASC";
     $result = mysqli_query($connection, $sql);
     $projects = [];
 
@@ -103,6 +103,7 @@
             <div class="row">
             <h3 class="project_sponsors">'.$projects[$i]['DONORS'].'</h3>
             <p>&nbsp;patrocinadores</p>
+            </div>
             </div>
             </div>
             </div>
